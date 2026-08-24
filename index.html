@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>King Transition Service LLC</title>
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    King Transition Service LLC
+  </title>
 
   <meta
     name="description"
@@ -12,381 +20,1508 @@
   >
 
   <style>
+
+    /* =====================================================
+       KING TRANSITION SERVICE LLC
+       PREMIUM WEBSITE UI + PHASE 2 MOTION SYSTEM
+       ===================================================== */
+
     :root {
+
       --bg: #071018;
-      --panel: rgba(18, 31, 43, 0.82);
-      --line: rgba(125, 211, 252, 0.14);
 
-      --text: #f7fbff;
-      --muted: #a9b8c6;
+      --bg-deep: #04090e;
 
-      --mint: #6ee7b7;
-      --cyan: #67e8f9;
-      --gold: #f1c75b;
+      --panel:
+        rgba(18, 31, 43, 0.82);
 
-      --shadow: 0 30px 80px rgba(0, 0, 0, 0.34);
+      --panel-solid:
+        #101b27;
+
+      --line:
+        rgba(125, 211, 252, 0.14);
+
+      --line-strong:
+        rgba(110, 231, 183, 0.32);
+
+      --text:
+        #f7fbff;
+
+      --muted:
+        #a9b8c6;
+
+      --mint:
+        #6ee7b7;
+
+      --cyan:
+        #67e8f9;
+
+      --gold:
+        #f1c75b;
+
+      --shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.34);
+
     }
+
+
+    /* =====================================================
+       RESET
+       ===================================================== */
 
     * {
-      box-sizing: border-box;
+
+      box-sizing:
+        border-box;
+
     }
+
 
     html {
-      scroll-behavior: smooth;
+
+      scroll-behavior:
+        smooth;
+
     }
 
+
     body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
+
+      margin:
+        0;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color:
+        var(--text);
 
       background:
+
         radial-gradient(
           circle at 15% 10%,
-          rgba(103, 232, 249, 0.12),
+          rgba(103,232,249,0.10),
           transparent 28%
         ),
+
         radial-gradient(
           circle at 86% 4%,
-          rgba(110, 231, 183, 0.12),
+          rgba(110,231,183,0.10),
           transparent 30%
         ),
+
         linear-gradient(
           180deg,
           var(--bg),
-          #050b11 70%
+          var(--bg-deep) 75%
         );
 
-      line-height: 1.65;
-      overflow-x: hidden;
+      line-height:
+        1.65;
+
+      overflow-x:
+        hidden;
+
+      position:
+        relative;
+
+      isolation:
+        isolate;
+
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-
-      opacity: 0.22;
-
-      background-image:
-        linear-gradient(
-          rgba(255,255,255,0.025) 1px,
-          transparent 1px
-        ),
-        linear-gradient(
-          90deg,
-          rgba(255,255,255,0.025) 1px,
-          transparent 1px
-        );
-
-      background-size: 38px 38px;
-      mask-image: linear-gradient(
-        to bottom,
-        black,
-        transparent 75%
-      );
-    }
 
     a {
-      color: var(--mint);
-      text-decoration: none;
+
+      color:
+        var(--mint);
+
+      text-decoration:
+        none;
+
     }
+
+
+    button,
+    a {
+
+      -webkit-tap-highlight-color:
+        transparent;
+
+    }
+
 
     .container {
-      width: min(1180px, calc(100% - 40px));
-      margin: auto;
+
+      width:
+        min(
+          1180px,
+          calc(100% - 40px)
+        );
+
+      margin:
+        auto;
+
     }
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
 
-      background: rgba(5, 12, 18, 0.76);
-      backdrop-filter: blur(18px);
+    /* =====================================================
+       BACKGROUND GRAPHICS
+       ===================================================== */
 
-      border-bottom: 1px solid var(--line);
-    }
+    body::before {
 
-    .nav {
-      min-height: 78px;
+      content:
+        "";
 
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      position:
+        fixed;
 
-      gap: 22px;
-    }
+      inset:
+        0;
 
-    .brand {
-      font-weight: 900;
-      letter-spacing: 0.7px;
-    }
+      pointer-events:
+        none;
 
-    .brand span {
-      color: var(--mint);
-    }
-
-    nav {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: var(--muted);
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: white;
-    }
-
-    .hero {
-      padding: 115px 0 95px;
-      position: relative;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-
-      gap: 52px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-
-      padding: 7px 12px;
-
-      border: 1px solid rgba(110, 231, 183, 0.22);
-      border-radius: 999px;
-
-      background: rgba(110, 231, 183, 0.06);
-      color: var(--mint);
-
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      font-size: clamp(48px, 7vw, 84px);
-      line-height: 0.98;
-      letter-spacing: -3px;
-
-      margin: 22px 0;
-    }
-
-    .gradient {
-      background: linear-gradient(
-        90deg,
-        #ffffff,
-        var(--mint),
-        var(--cyan)
-      );
-
-      -webkit-background-clip: text;
-      background-clip: text;
-
-      color: transparent;
-    }
-
-    .hero p {
-      font-size: 19px;
-      color: var(--muted);
-
-      max-width: 720px;
-    }
-
-    .actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-
-      margin-top: 30px;
-    }
-
-    .btn {
-      padding: 14px 20px;
-
-      border-radius: 12px;
-      font-weight: 900;
-
-      border: 1px solid rgba(255, 255, 255, 0.1);
-
-      background: linear-gradient(
-        135deg,
-        var(--mint),
-        var(--cyan)
-      );
-
-      color: #04100f;
-
-      box-shadow:
-        0 12px 40px rgba(103, 232, 249, 0.16);
-    }
-
-    .btn.alt {
-      background: rgba(255, 255, 255, 0.035);
-      color: white;
-
-      border-color: var(--line);
-    }
-
-    .command {
-      position: relative;
-
-      background: linear-gradient(
-        145deg,
-        rgba(25, 43, 57, 0.86),
-        rgba(10, 19, 28, 0.92)
-      );
-
-      border: 1px solid var(--line);
-      border-radius: 24px;
-
-      padding: 28px;
-
-      box-shadow: var(--shadow);
-      overflow: hidden;
-    }
-
-    .command::after {
-      content: "";
-
-      position: absolute;
-
-      width: 240px;
-      height: 240px;
-
-      border-radius: 50%;
-
-      right: -80px;
-      top: -90px;
+      z-index:
+        0;
 
       background:
+
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(103,232,249,0.09),
+          transparent 24%
+        ),
+
+        radial-gradient(
+          circle at 82% 30%,
+          rgba(110,231,183,0.09),
+          transparent 26%
+        ),
+
+        radial-gradient(
+          circle at 50% 75%,
+          rgba(241,197,91,0.05),
+          transparent 30%
+        );
+
+      animation:
+        glowShift 12s
+        ease-in-out
+        infinite
+        alternate;
+
+    }
+
+
+    body::after {
+
+      content:
+        "";
+
+      position:
+        fixed;
+
+      inset:
+        0;
+
+      pointer-events:
+        none;
+
+      z-index:
+        0;
+
+      opacity:
+        0.14;
+
+      background-image:
+
+        linear-gradient(
+          rgba(103,232,249,0.10)
+          1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(103,232,249,0.10)
+          1px,
+          transparent 1px
+        );
+
+      background-size:
+        120px 120px;
+
+      mask-image:
+        linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.55),
+          rgba(255,255,255,0.03)
+        );
+
+    }
+
+
+    body > *:not(.page-effects) {
+
+      position:
+        relative;
+
+      z-index:
+        1;
+
+    }
+
+
+    .page-effects {
+
+      position:
+        fixed;
+
+      inset:
+        0;
+
+      pointer-events:
+        none;
+
+      overflow:
+        hidden;
+
+      z-index:
+        0;
+
+    }
+
+
+    /* =====================================================
+       MOVING LIGHT STREAKS
+       ===================================================== */
+
+    .page-effects .line {
+
+      position:
+        absolute;
+
+      left:
+        -20%;
+
+      width:
+        140%;
+
+      height:
+        2px;
+
+      border-radius:
+        999px;
+
+      opacity:
+        0;
+
+      transform:
+        rotate(-12deg);
+
+      background:
+
+        linear-gradient(
+
+          90deg,
+
+          transparent 0%,
+
+          rgba(103,232,249,0.05)
+          15%,
+
+          rgba(103,232,249,0.35)
+          35%,
+
+          rgba(110,231,183,0.65)
+          50%,
+
+          rgba(103,232,249,0.35)
+          65%,
+
+          rgba(103,232,249,0.05)
+          85%,
+
+          transparent 100%
+
+        );
+
+      box-shadow:
+
+        0 0 10px
+        rgba(103,232,249,0.15),
+
+        0 0 24px
+        rgba(110,231,183,0.10);
+
+    }
+
+
+    .line-1 {
+
+      top:
+        18%;
+
+      animation:
+        streakMove 10s
+        linear infinite;
+
+    }
+
+
+    .line-2 {
+
+      top:
+        38%;
+
+      animation:
+        streakMove 14s
+        linear infinite 2s;
+
+    }
+
+
+    .line-3 {
+
+      top:
+        60%;
+
+      animation:
+        streakMove 12s
+        linear infinite 4s;
+
+    }
+
+
+    .line-4 {
+
+      top:
+        78%;
+
+      animation:
+        streakMove 16s
+        linear infinite 1s;
+
+    }
+
+
+    /* =====================================================
+       AMBIENT ORBS
+       ===================================================== */
+
+    .orb {
+
+      position:
+        absolute;
+
+      width:
+        260px;
+
+      height:
+        260px;
+
+      border-radius:
+        50%;
+
+      filter:
+        blur(65px);
+
+      opacity:
+        0.16;
+
+      background:
+
         radial-gradient(
           circle,
-          rgba(110, 231, 183, 0.25),
-          transparent 65%
+          rgba(110,231,183,0.55),
+          transparent 70%
         );
+
+      animation:
+        floatOrb 18s
+        ease-in-out
+        infinite alternate;
+
     }
 
-    .command h2 {
-      color: var(--gold);
-      margin: 0 0 22px;
+
+    .orb-1 {
+
+      top:
+        7%;
+
+      right:
+        6%;
+
     }
 
-    .metric {
-      display: flex;
-      justify-content: space-between;
 
-      gap: 16px;
+    .orb-2 {
 
-      padding: 14px 0;
+      bottom:
+        10%;
+
+      left:
+        8%;
+
+      background:
+
+        radial-gradient(
+          circle,
+          rgba(103,232,249,0.48),
+          transparent 70%
+        );
+
+      animation-duration:
+        22s;
+
+    }
+
+
+    .orb-3 {
+
+      top:
+        46%;
+
+      right:
+        34%;
+
+      width:
+        160px;
+
+      height:
+        160px;
+
+      opacity:
+        0.10;
+
+      background:
+
+        radial-gradient(
+          circle,
+          rgba(241,197,91,0.55),
+          transparent 70%
+        );
+
+      animation-duration:
+        26s;
+
+    }
+
+
+    /* =====================================================
+       HEADER / NAVIGATION
+       ===================================================== */
+
+    header {
+
+      position:
+        sticky;
+
+      top:
+        0;
+
+      z-index:
+        50;
+
+      background:
+        rgba(5,12,18,0.76);
+
+      backdrop-filter:
+        blur(18px);
+
+      -webkit-backdrop-filter:
+        blur(18px);
 
       border-bottom:
-        1px solid rgba(255,255,255,0.07);
+        1px solid var(--line);
+
     }
 
-    .metric:last-child {
-      border-bottom: 0;
+
+    .nav {
+
+      min-height:
+        78px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        space-between;
+
+      gap:
+        22px;
+
     }
 
-    .metric b {
-      color: white;
+
+    .brand {
+
+      font-weight:
+        900;
+
+      letter-spacing:
+        0.7px;
+
+      animation:
+        brandReveal
+        0.8s ease both;
+
     }
 
-    .metric span {
-      color: var(--muted);
+
+    .brand span {
+
+      color:
+        var(--mint);
+
+      text-shadow:
+        0 0 20px
+        rgba(110,231,183,0.16);
+
     }
 
-    section {
-      padding: 80px 0;
+
+    nav {
+
+      display:
+        flex;
+
+      gap:
+        24px;
+
+      flex-wrap:
+        wrap;
+
     }
 
-    .section-title {
-      font-size: 38px;
-      line-height: 1.1;
 
-      margin: 0 0 12px;
-    }
+    nav a {
 
-    .intro {
-      color: var(--muted);
-      max-width: 760px;
+      color:
+        var(--muted);
 
-      margin-bottom: 34px;
-    }
+      font-weight:
+        700;
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      font-size:
+        14px;
 
-      gap: 22px;
-    }
+      position:
+        relative;
 
-    .card {
-      background: var(--panel);
-
-      border: 1px solid var(--line);
-      border-radius: 20px;
-
-      padding: 26px;
-
-      box-shadow:
-        0 18px 50px rgba(0,0,0,0.18);
+      padding:
+        8px 0;
 
       transition:
-        0.25s transform,
-        0.25s border-color;
+        color 0.25s ease;
+
     }
 
-    .card:hover {
-      transform: translateY(-5px);
+
+    nav a::after {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      left:
+        0;
+
+      bottom:
+        1px;
+
+      width:
+        100%;
+
+      height:
+        2px;
+
+      transform:
+        scaleX(0);
+
+      transform-origin:
+        center;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--mint),
+          var(--cyan)
+        );
+
+      transition:
+        transform
+        0.28s ease;
+
+    }
+
+
+    nav a:hover {
+
+      color:
+        white;
+
+    }
+
+
+    nav a:hover::after {
+
+      transform:
+        scaleX(1);
+
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .hero {
+
+      min-height:
+        calc(100vh - 78px);
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      padding:
+        90px 0;
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+    }
+
+
+    .hero-grid {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        1.1fr 0.9fr;
+
+      gap:
+        52px;
+
+      align-items:
+        center;
+
+    }
+
+
+    .hero-content {
+
+      position:
+        relative;
+
+    }
+
+
+    .hero-mouse-glow {
+
+      position:
+        absolute;
+
+      width:
+        420px;
+
+      height:
+        420px;
+
+      border-radius:
+        50%;
+
+      pointer-events:
+        none;
+
+      opacity:
+        0;
+
+      background:
+
+        radial-gradient(
+          circle,
+          rgba(103,232,249,0.10),
+          rgba(110,231,183,0.04) 35%,
+          transparent 70%
+        );
+
+      filter:
+        blur(15px);
+
+      transform:
+        translate(-50%,-50%);
+
+      transition:
+        opacity 0.35s ease;
+
+      z-index:
+        0;
+
+    }
+
+
+    .hero-content > * {
+
+      position:
+        relative;
+
+      z-index:
+        1;
+
+    }
+
+
+    .eyebrow {
+
+      display:
+        inline-flex;
+
+      gap:
+        8px;
+
+      align-items:
+        center;
+
+      padding:
+        7px 12px;
+
+      border:
+        1px solid
+        rgba(110,231,183,0.22);
+
+      border-radius:
+        999px;
+
+      background:
+        rgba(110,231,183,0.06);
+
+      color:
+        var(--mint);
+
+      font-size:
+        12px;
+
+      font-weight:
+        900;
+
+      letter-spacing:
+        1.5px;
+
+      text-transform:
+        uppercase;
+
+      opacity:
+        0;
+
+      animation:
+        heroReveal
+        0.7s ease forwards;
+
+    }
+
+
+    h1 {
+
+      font-size:
+        clamp(
+          48px,
+          7vw,
+          84px
+        );
+
+      line-height:
+        0.98;
+
+      letter-spacing:
+        -3px;
+
+      margin:
+        22px 0;
+
+      opacity:
+        0;
+
+      animation:
+        heroReveal
+        0.85s ease
+        0.12s forwards;
+
+    }
+
+
+    .gradient {
+
+      background:
+
+        linear-gradient(
+          90deg,
+          #ffffff,
+          var(--mint),
+          var(--cyan),
+          #ffffff
+        );
+
+      background-size:
+        240% auto;
+
+      -webkit-background-clip:
+        text;
+
+      background-clip:
+        text;
+
+      color:
+        transparent;
+
+      animation:
+        textShimmer 7s
+        linear infinite;
+
+    }
+
+
+    .hero p {
+
+      font-size:
+        19px;
+
+      color:
+        var(--muted);
+
+      max-width:
+        720px;
+
+      opacity:
+        0;
+
+      animation:
+        heroReveal
+        0.85s ease
+        0.24s forwards;
+
+    }
+
+
+    /* =====================================================
+       BUTTONS
+       ===================================================== */
+
+    .actions {
+
+      display:
+        flex;
+
+      gap:
+        14px;
+
+      flex-wrap:
+        wrap;
+
+      margin-top:
+        30px;
+
+      opacity:
+        0;
+
+      animation:
+        heroReveal
+        0.85s ease
+        0.36s forwards;
+
+    }
+
+
+    .btn {
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+      padding:
+        14px 20px;
+
+      border-radius:
+        12px;
+
+      font-weight:
+        900;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.10);
+
+      background:
+
+        linear-gradient(
+          135deg,
+          var(--mint),
+          var(--cyan)
+        );
+
+      color:
+        #04100f;
+
+      box-shadow:
+        0 12px 40px
+        rgba(103,232,249,0.16);
+
+      transition:
+
+        transform
+        0.25s ease,
+
+        box-shadow
+        0.25s ease,
+
+        filter
+        0.25s ease;
+
+    }
+
+
+    .btn::before {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      top:
+        -60%;
+
+      left:
+        -80%;
+
+      width:
+        60%;
+
+      height:
+        220%;
+
+      transform:
+        rotate(18deg);
+
+      background:
+
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(255,255,255,0.55),
+          transparent
+        );
+
+      transition:
+        left 0.55s ease;
+
+    }
+
+
+    .btn:hover::before {
+
+      left:
+        130%;
+
+    }
+
+
+    .btn:hover {
+
+      transform:
+        translateY(-4px)
+        scale(1.015);
+
+      filter:
+        brightness(1.05);
+
+      box-shadow:
+
+        0 18px 45px
+        rgba(103,232,249,0.22),
+
+        0 0 30px
+        rgba(110,231,183,0.13);
+
+    }
+
+
+    .btn.alt {
+
+      background:
+        rgba(255,255,255,0.035);
+
+      color:
+        white;
 
       border-color:
-        rgba(110, 231, 183, 0.36);
+        var(--line);
+
     }
 
-    .card h3 {
-      margin-top: 0;
-      color: var(--mint);
+
+    /* =====================================================
+       COMPANY INFORMATION PANEL
+       ===================================================== */
+
+    .command {
+
+      position:
+        relative;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          rgba(25,43,57,0.88),
+          rgba(10,19,28,0.94)
+        );
+
+      border:
+        1px solid var(--line);
+
+      border-radius:
+        24px;
+
+      padding:
+        28px;
+
+      box-shadow:
+        var(--shadow);
+
+      overflow:
+        hidden;
+
+      opacity:
+        0;
+
+      animation:
+
+        panelReveal
+        0.9s ease
+        0.25s forwards,
+
+        ambientGlow
+        6s ease-in-out
+        1.2s infinite;
+
     }
 
-    .card p {
-      color: var(--muted);
+
+    .command::before {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      inset:
+        0;
+
+      padding:
+        1px;
+
+      border-radius:
+        inherit;
+
+      background:
+
+        linear-gradient(
+          120deg,
+          transparent 10%,
+          rgba(103,232,249,0.45),
+          rgba(110,231,183,0.40),
+          transparent 90%
+        );
+
+      background-size:
+        260% 260%;
+
+      animation:
+        borderFlow 8s
+        linear infinite;
+
+      -webkit-mask:
+
+        linear-gradient(
+          #fff 0 0
+        )
+        content-box,
+
+        linear-gradient(
+          #fff 0 0
+        );
+
+      -webkit-mask-composite:
+        xor;
+
+      mask-composite:
+        exclude;
+
+      pointer-events:
+        none;
+
     }
+
+
+    .command::after {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      width:
+        240px;
+
+      height:
+        240px;
+
+      border-radius:
+        50%;
+
+      right:
+        -80px;
+
+      top:
+        -90px;
+
+      background:
+
+        radial-gradient(
+          circle,
+          rgba(110,231,183,0.25),
+          transparent 65%
+        );
+
+      animation:
+        panelOrb
+        8s ease-in-out
+        infinite alternate;
+
+    }
+
+
+    .command h2 {
+
+      color:
+        var(--gold);
+
+      margin:
+        0 0 22px;
+
+    }
+
+
+    .metric {
+
+      display:
+        flex;
+
+      justify-content:
+        space-between;
+
+      gap:
+        16px;
+
+      padding:
+        14px 0;
+
+      border-bottom:
+        1px solid
+        rgba(255,255,255,0.07);
+
+      transition:
+        padding-left
+        0.25s ease;
+
+    }
+
+
+    .metric:hover {
+
+      padding-left:
+        7px;
+
+    }
+
+
+    .metric:last-child {
+
+      border-bottom:
+        0;
+
+    }
+
+
+    .metric b {
+
+      color:
+        white;
+
+      text-align:
+        right;
+
+    }
+
+
+    .metric span {
+
+      color:
+        var(--muted);
+
+    }
+
+
+    /* =====================================================
+       GENERAL SECTIONS
+       ===================================================== */
+
+    section {
+
+      padding:
+        80px 0;
+
+    }
+
+
+    .section-title {
+
+      font-size:
+        38px;
+
+      line-height:
+        1.1;
+
+      margin:
+        0 0 12px;
+
+    }
+
+
+    .intro {
+
+      color:
+        var(--muted);
+
+      max-width:
+        760px;
+
+      margin-bottom:
+        34px;
+
+    }
+
 
     .band {
+
       background:
+
         linear-gradient(
           180deg,
           rgba(255,255,255,0.018),
           rgba(255,255,255,0.01)
         );
 
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+      border-top:
+        1px solid var(--line);
+
+      border-bottom:
+        1px solid var(--line);
+
     }
+
+
+    /* =====================================================
+       CARDS
+       ===================================================== */
+
+    .grid {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap:
+        22px;
+
+    }
+
+
+    .card {
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+      background:
+        var(--panel);
+
+      border:
+        1px solid var(--line);
+
+      border-radius:
+        20px;
+
+      padding:
+        26px;
+
+      box-shadow:
+        0 18px 50px
+        rgba(0,0,0,0.18);
+
+      transition:
+
+        transform
+        0.35s ease,
+
+        border-color
+        0.35s ease,
+
+        box-shadow
+        0.35s ease;
+
+    }
+
+
+    .card::before {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      inset:
+        0;
+
+      opacity:
+        0;
+
+      background:
+
+        radial-gradient(
+          circle at 20% 0%,
+          rgba(110,231,183,0.12),
+          transparent 38%
+        );
+
+      transition:
+        opacity 0.35s ease;
+
+    }
+
+
+    .card:hover::before {
+
+      opacity:
+        1;
+
+    }
+
+
+    .card:hover {
+
+      transform:
+        translateY(-8px);
+
+      border-color:
+        rgba(110,231,183,0.35);
+
+      box-shadow:
+
+        0 28px 60px
+        rgba(0,0,0,0.28),
+
+        0 0 28px
+        rgba(110,231,183,0.06);
+
+    }
+
+
+    .card h3 {
+
+      position:
+        relative;
+
+      margin-top:
+        0;
+
+      color:
+        var(--mint);
+
+    }
+
+
+    .card p {
+
+      position:
+        relative;
+
+      color:
+        var(--muted);
+
+    }
+
+
+    /* =====================================================
+       PRODUCT SECTION
+       ===================================================== */
 
     .product {
-      display: grid;
-      grid-template-columns: 1fr 0.8fr;
 
-      gap: 32px;
-      align-items: stretch;
+      display:
+        grid;
+
+      grid-template-columns:
+        1fr 0.8fr;
+
+      gap:
+        32px;
+
+      align-items:
+        stretch;
+
     }
 
+
     .product-main {
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
       background:
+
         linear-gradient(
           135deg,
           rgba(110,231,183,0.09),
@@ -394,799 +1529,1745 @@
         );
 
       border:
-        1px solid rgba(110,231,183,0.18);
+        1px solid
+        rgba(110,231,183,0.18);
 
-      border-radius: 24px;
+      border-radius:
+        24px;
 
-      padding: 34px;
+      padding:
+        34px;
+
+      animation:
+        productPulse
+        6s ease-in-out
+        infinite;
+
+      transition:
+
+        transform
+        0.35s ease,
+
+        border-color
+        0.35s ease;
+
     }
 
+
+    .product-main::before {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      inset:
+        -50%;
+
+      background:
+
+        conic-gradient(
+          from 180deg,
+          transparent 0deg,
+          rgba(110,231,183,0.05) 90deg,
+          transparent 180deg,
+          rgba(103,232,249,0.05) 270deg,
+          transparent 360deg
+        );
+
+      animation:
+        productRotate
+        18s linear infinite;
+
+      pointer-events:
+        none;
+
+    }
+
+
+    .product-main > * {
+
+      position:
+        relative;
+
+      z-index:
+        1;
+
+    }
+
+
+    .product-main:hover {
+
+      transform:
+        translateY(-6px);
+
+      border-color:
+        rgba(110,231,183,0.34);
+
+    }
+
+
     .pill {
-      display: inline-block;
 
-      padding: 6px 10px;
+      display:
+        inline-block;
 
-      border-radius: 999px;
+      padding:
+        6px 10px;
+
+      border-radius:
+        999px;
 
       background:
         rgba(110,231,183,0.12);
 
-      color: var(--mint);
+      color:
+        var(--mint);
 
-      font-size: 12px;
-      font-weight: 900;
+      font-size:
+        12px;
 
-      text-transform: uppercase;
-      letter-spacing: 0.7px;
+      font-weight:
+        900;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        0.7px;
+
     }
+
 
     .product-main h3 {
-      font-size: 42px;
 
-      margin: 16px 0 8px;
+      font-size:
+        42px;
+
+      margin:
+        16px 0 8px;
+
     }
+
 
     .product-main p {
-      color: var(--muted);
+
+      color:
+        var(--muted);
+
     }
+
 
     .side-stack {
-      display: grid;
-      gap: 18px;
+
+      display:
+        grid;
+
+      gap:
+        18px;
+
     }
+
 
     .mini {
-      background: var(--panel);
 
-      border: 1px solid var(--line);
-      border-radius: 20px;
+      background:
+        var(--panel);
 
-      padding: 24px;
+      border:
+        1px solid var(--line);
+
+      border-radius:
+        20px;
+
+      padding:
+        24px;
+
+      transition:
+
+        transform
+        0.35s ease,
+
+        border-color
+        0.35s ease,
+
+        box-shadow
+        0.35s ease;
+
     }
+
+
+    .mini:hover {
+
+      transform:
+        translateX(7px);
+
+      border-color:
+        rgba(103,232,249,0.30);
+
+      box-shadow:
+        0 20px 40px
+        rgba(0,0,0,0.20);
+
+    }
+
 
     .mini b {
-      display: block;
 
-      color: var(--gold);
+      display:
+        block;
 
-      margin-bottom: 8px;
+      color:
+        var(--gold);
+
+      margin-bottom:
+        8px;
+
     }
+
 
     .mini span {
-      color: var(--muted);
+
+      color:
+        var(--muted);
+
     }
+
+
+    /* =====================================================
+       CONTACT
+       ===================================================== */
 
     .contact {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
 
-      gap: 30px;
+      display:
+        grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap:
+        30px;
+
     }
+
 
     .contact-box {
-      background: var(--panel);
 
-      border: 1px solid var(--line);
-      border-radius: 20px;
+      background:
+        var(--panel);
 
-      padding: 28px;
+      border:
+        1px solid var(--line);
+
+      border-radius:
+        20px;
+
+      padding:
+        28px;
+
+      transition:
+
+        transform
+        0.35s ease,
+
+        border-color
+        0.35s ease,
+
+        box-shadow
+        0.35s ease;
+
     }
+
+
+    .contact-box:hover {
+
+      transform:
+        translateY(-6px);
+
+      border-color:
+        rgba(110,231,183,0.30);
+
+      box-shadow:
+
+        0 22px 50px
+        rgba(0,0,0,0.23),
+
+        0 0 30px
+        rgba(103,232,249,0.05);
+
+    }
+
 
     .contact-box strong {
-      color: white;
+
+      color:
+        white;
+
     }
+
 
     .contact-box p {
-      color: var(--muted);
+
+      color:
+        var(--muted);
+
     }
+
+
+    /* =====================================================
+       SCROLL REVEAL
+       ===================================================== */
+
+    .reveal {
+
+      opacity:
+        0;
+
+      transform:
+        translateY(38px);
+
+      transition:
+
+        opacity
+        0.8s ease,
+
+        transform
+        0.8s
+        cubic-bezier(
+          0.22,
+          1,
+          0.36,
+          1
+        );
+
+    }
+
+
+    .reveal.visible {
+
+      opacity:
+        1;
+
+      transform:
+        translateY(0);
+
+    }
+
+
+    .reveal-delay-1 {
+
+      transition-delay:
+        0.08s;
+
+    }
+
+
+    .reveal-delay-2 {
+
+      transition-delay:
+        0.16s;
+
+    }
+
+
+    .reveal-delay-3 {
+
+      transition-delay:
+        0.24s;
+
+    }
+
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
 
     footer {
-      padding: 36px 0;
 
-      border-top: 1px solid var(--line);
+      padding:
+        36px 0;
 
-      color: var(--muted);
-      font-size: 14px;
+      border-top:
+        1px solid var(--line);
+
+      color:
+        var(--muted);
+
+      font-size:
+        14px;
+
     }
+
 
     .foot {
-      display: flex;
-      justify-content: space-between;
 
-      gap: 20px;
-      flex-wrap: wrap;
+      display:
+        flex;
+
+      justify-content:
+        space-between;
+
+      gap:
+        20px;
+
+      flex-wrap:
+        wrap;
+
     }
 
-    @media (max-width: 850px) {
+
+    /* =====================================================
+       KEYFRAMES
+       ===================================================== */
+
+    @keyframes heroReveal {
+
+      from {
+
+        opacity:
+          0;
+
+        transform:
+          translateY(28px);
+
+      }
+
+      to {
+
+        opacity:
+          1;
+
+        transform:
+          translateY(0);
+
+      }
+
+    }
+
+
+    @keyframes panelReveal {
+
+      from {
+
+        opacity:
+          0;
+
+        transform:
+          translateY(35px)
+          scale(0.98);
+
+      }
+
+      to {
+
+        opacity:
+          1;
+
+        transform:
+          translateY(0)
+          scale(1);
+
+      }
+
+    }
+
+
+    @keyframes brandReveal {
+
+      from {
+
+        opacity:
+          0;
+
+        transform:
+          translateX(-18px);
+
+      }
+
+      to {
+
+        opacity:
+          1;
+
+        transform:
+          translateX(0);
+
+      }
+
+    }
+
+
+    @keyframes ambientGlow {
+
+      0%,
+      100% {
+
+        box-shadow:
+
+          0 30px 80px
+          rgba(0,0,0,0.34),
+
+          0 0 0
+          rgba(110,231,183,0);
+
+      }
+
+      50% {
+
+        box-shadow:
+
+          0 30px 80px
+          rgba(0,0,0,0.34),
+
+          0 0 48px
+          rgba(110,231,183,0.10);
+
+      }
+
+    }
+
+
+    @keyframes glowShift {
+
+      0% {
+
+        transform:
+          scale(1)
+          translateY(0);
+
+      }
+
+      100% {
+
+        transform:
+          scale(1.04)
+          translateY(-10px);
+
+      }
+
+    }
+
+
+    @keyframes streakMove {
+
+      0% {
+
+        transform:
+          translateX(-12%)
+          rotate(-12deg);
+
+        opacity:
+          0;
+
+      }
+
+      10% {
+
+        opacity:
+          0.22;
+
+      }
+
+      50% {
+
+        opacity:
+          0.55;
+
+      }
+
+      90% {
+
+        opacity:
+          0.18;
+
+      }
+
+      100% {
+
+        transform:
+          translateX(12%)
+          rotate(-12deg);
+
+        opacity:
+          0;
+
+      }
+
+    }
+
+
+    @keyframes floatOrb {
+
+      0% {
+
+        transform:
+          translate(0,0)
+          scale(1);
+
+      }
+
+      100% {
+
+        transform:
+          translate(25px,-18px)
+          scale(1.10);
+
+      }
+
+    }
+
+
+    @keyframes textShimmer {
+
+      0% {
+
+        background-position:
+          0% center;
+
+      }
+
+      100% {
+
+        background-position:
+          240% center;
+
+      }
+
+    }
+
+
+    @keyframes borderFlow {
+
+      0% {
+
+        background-position:
+          0% 50%;
+
+      }
+
+      100% {
+
+        background-position:
+          260% 50%;
+
+      }
+
+    }
+
+
+    @keyframes panelOrb {
+
+      from {
+
+        transform:
+          translate(0,0)
+          scale(1);
+
+      }
+
+      to {
+
+        transform:
+          translate(-18px,18px)
+          scale(1.08);
+
+      }
+
+    }
+
+
+    @keyframes productPulse {
+
+      0%,
+      100% {
+
+        box-shadow:
+          0 20px 45px
+          rgba(0,0,0,0.16);
+
+      }
+
+      50% {
+
+        box-shadow:
+
+          0 24px 56px
+          rgba(0,0,0,0.22),
+
+          0 0 42px
+          rgba(110,231,183,0.07);
+
+      }
+
+    }
+
+
+    @keyframes productRotate {
+
+      from {
+
+        transform:
+          rotate(0deg);
+
+      }
+
+      to {
+
+        transform:
+          rotate(360deg);
+
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+       ===================================================== */
+
+    @media (
+      max-width:
+      850px
+    ) {
 
       .hero-grid,
       .product,
       .contact,
       .grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
+
       }
+
 
       .nav {
-        align-items: flex-start;
-        flex-direction: column;
 
-        padding: 16px 0;
+        align-items:
+          flex-start;
+
+        flex-direction:
+          column;
+
+        padding:
+          16px 0;
+
       }
+
 
       .hero {
-        padding-top: 70px;
+
+        min-height:
+          auto;
+
+        padding-top:
+          70px;
+
       }
+
 
       h1 {
-        letter-spacing: -1.5px;
+
+        letter-spacing:
+          -1.5px;
+
       }
+
+
+      .metric {
+
+        flex-direction:
+          column;
+
+      }
+
+
+      .metric b {
+
+        text-align:
+          left;
+
+      }
+
     }
-    /* =========================
-   Animated background effects
-   ========================= */
 
-body {
-  position: relative;
-  overflow-x: hidden;
-  isolation: isolate;
-}
 
-/* soft glow background */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background:
-    radial-gradient(circle at 15% 20%, rgba(103, 232, 249, 0.10), transparent 25%),
-    radial-gradient(circle at 82% 30%, rgba(110, 231, 183, 0.10), transparent 25%),
-    radial-gradient(circle at 50% 75%, rgba(241, 197, 91, 0.06), transparent 30%);
-  animation: glowShift 12s ease-in-out infinite alternate;
-}
+    /* =====================================================
+       ACCESSIBILITY
+       ===================================================== */
 
-/* faint tech grid lines */
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.14;
-  background-image:
-    linear-gradient(rgba(103, 232, 249, 0.10) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(103, 232, 249, 0.10) 1px, transparent 1px);
-  background-size: 120px 120px;
-  mask-image: linear-gradient(to bottom, rgba(255,255,255,0.45), rgba(255,255,255,0.08));
-}
+    @media (
+      prefers-reduced-motion:
+      reduce
+    ) {
 
-/* make sure page content stays above effects */
-body > *:not(.page-effects) {
-  position: relative;
-  z-index: 1;
-}
+      *,
 
-/* animated streak layer */
-.page-effects {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
-  z-index: 0;
-}
+      *::before,
 
-.page-effects .line {
-  position: absolute;
-  left: -20%;
-  width: 140%;
-  height: 2px;
-  border-radius: 999px;
-  opacity: 0;
-  transform: rotate(-12deg);
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(103, 232, 249, 0.05) 15%,
-    rgba(103, 232, 249, 0.35) 35%,
-    rgba(110, 231, 183, 0.65) 50%,
-    rgba(103, 232, 249, 0.35) 65%,
-    rgba(103, 232, 249, 0.05) 85%,
-    transparent 100%
-  );
-  box-shadow:
-    0 0 10px rgba(103, 232, 249, 0.15),
-    0 0 24px rgba(110, 231, 183, 0.10);
-}
+      *::after {
 
-.page-effects .line-1 {
-  top: 18%;
-  animation: streakMove 10s linear infinite;
-}
+        animation-duration:
+          0.01ms !important;
 
-.page-effects .line-2 {
-  top: 38%;
-  animation: streakMove 14s linear infinite 2s;
-}
+        animation-iteration-count:
+          1 !important;
 
-.page-effects .line-3 {
-  top: 60%;
-  animation: streakMove 12s linear infinite 4s;
-}
+        transition-duration:
+          0.01ms !important;
 
-.page-effects .line-4 {
-  top: 78%;
-  animation: streakMove 16s linear infinite 1s;
-}
+        scroll-behavior:
+          auto !important;
 
-.page-effects .orb {
-  position: absolute;
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0.16;
-  background: radial-gradient(circle, rgba(110,231,183,0.55), transparent 70%);
-  animation: floatOrb 18s ease-in-out infinite alternate;
-}
+      }
 
-.page-effects .orb-1 {
-  top: 8%;
-  right: 6%;
-}
 
-.page-effects .orb-2 {
-  bottom: 10%;
-  left: 8%;
-  background: radial-gradient(circle, rgba(103,232,249,0.45), transparent 70%);
-  animation-duration: 22s;
-}
+      .reveal {
 
-@keyframes glowShift {
-  0% {
-    transform: scale(1) translateY(0);
-    opacity: 0.95;
-  }
-  100% {
-    transform: scale(1.04) translateY(-10px);
-    opacity: 1;
-  }
-}
+        opacity:
+          1;
 
-@keyframes streakMove {
-  0% {
-    transform: translateX(-12%) rotate(-12deg);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 0.55;
-  }
-  90% {
-    opacity: 0.20;
-  }
-  100% {
-    transform: translateX(12%) rotate(-12deg);
-    opacity: 0;
-  }
-}
+        transform:
+          none;
 
-@keyframes floatOrb {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-  100% {
-    transform: translate(20px, -18px) scale(1.08);
-  }
-}
+      }
 
-/* optional subtle hover lift for cards/buttons if not already present */
-.card,
-.panel,
-.hero-card,
-.info-card,
-button,
-.cta,
-a.button {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    }
 
-.card:hover,
-.panel:hover,
-.hero-card:hover,
-.info-card:hover,
-button:hover,
-.cta:hover,
-a.button:hover {
-  transform: translateY(-3px);
-}
   </style>
+
 </head>
 
+
 <body>
+
+
+  <!-- =============================================
+       BACKGROUND VISUAL EFFECTS
+       ============================================= -->
+
   <div class="page-effects">
+
     <span class="line line-1"></span>
+
     <span class="line line-2"></span>
+
     <span class="line line-3"></span>
+
     <span class="line line-4"></span>
 
     <span class="orb orb-1"></span>
+
     <span class="orb orb-2"></span>
-  </div>
 
-<header>
-
-  <div class="container nav">
-
-    <div class="brand">
-      KING TRANSITION
-      <span>SERVICE LLC</span>
-    </div>
-
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#products">Products</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <span class="orb orb-3"></span>
 
   </div>
 
-</header>
 
-<main>
+  <!-- =============================================
+       HEADER
+       ============================================= -->
 
-<section class="hero">
+  <header>
 
-  <div class="container hero-grid">
+    <div class="container nav">
 
-    <div>
+      <div class="brand">
 
-      <div class="eyebrow">
-        Official Company Website
+        KING TRANSITION
+
+        <span>
+          SERVICE LLC
+        </span>
+
       </div>
 
-      <h1>
-        Building
-        <span class="gradient">
-          practical digital solutions
-        </span>
-        with purpose.
-      </h1>
 
-      <p>
-        King Transition Service LLC is a U.S.-based
-        limited liability company supporting professional
-        services, technology projects, software development,
-        and digital products.
-      </p>
+      <nav>
 
-      <div class="actions">
-
-        <a
-          class="btn"
-          href="#products"
-        >
-          Explore Products
+        <a href="#about">
+          About
         </a>
 
-        <a
-          class="btn alt"
-          href="#contact"
-        >
-          Contact Us
+        <a href="#services">
+          Services
         </a>
 
-      </div>
+        <a href="#products">
+          Products
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </nav>
 
     </div>
 
-    <div class="command">
+  </header>
 
-      <h2>
-        Company Information
-      </h2>
 
-      <div class="metric">
+  <main>
 
-        <span>
-          Legal Name
-        </span>
 
-        <b>
-          KING TRANSITION SERVICE LLC
-        </b>
+    <!-- =============================================
+         HERO
+         ============================================= -->
 
-      </div>
+    <section class="hero">
 
-      <div class="metric">
+      <div class="container hero-grid">
 
-        <span>
-          Organization Type
-        </span>
 
-        <b>
-          Limited Liability Company
-        </b>
+        <div
+          class="hero-content"
+          id="heroContent"
+        >
 
-      </div>
+          <div
+            class="hero-mouse-glow"
+            id="heroGlow"
+          ></div>
 
-      <div class="metric">
 
-        <span>
-          Location
-        </span>
+          <div class="eyebrow">
 
-        <b>
-          Georgia, United States
-        </b>
+            Official Company Website
 
-      </div>
+          </div>
 
-      <div class="metric">
 
-        <span>
-          Official Website
-        </span>
+          <h1>
 
-        <b>
-          kingtransitionservice.com
-        </b>
+            Building
 
-      </div>
+            <span class="gradient">
 
-    </div>
+              practical digital solutions
 
-  </div>
+            </span>
 
-</section>
+            with purpose.
 
-<section
-  id="about"
-  class="band"
->
+          </h1>
 
-  <div class="container">
 
-    <h2 class="section-title">
-      About King Transition Service LLC
-    </h2>
+          <p>
 
-    <p class="intro">
-      We build and support practical technology solutions
-      focused on organization, productivity,
-      and better everyday workflows.
-    </p>
+            King Transition Service LLC is a U.S.-based
+            limited liability company supporting
+            professional services, technology projects,
+            software development, and digital products.
 
-    <div class="grid">
+          </p>
 
-      <div class="card">
 
-        <h3>
-          Official Business Presence
-        </h3>
+          <div class="actions">
 
-        <p>
-          This website is the official online presence
-          of KING TRANSITION SERVICE LLC and provides
-          company, product, privacy,
-          and support information.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <h3>
-          Technology Focus
-        </h3>
-
-        <p>
-          We develop user-focused software
-          and digital tools designed around
-          clear workflows and practical everyday use.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <h3>
-          Product Support
-        </h3>
-
-        <p>
-          Official product information,
-          policy notices, privacy documentation,
-          and support contacts are maintained here.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section id="services">
-
-  <div class="container">
-
-    <h2 class="section-title">
-      What We Do
-    </h2>
-
-    <p class="intro">
-      Professional services and technology-driven
-      solutions for practical business
-      and consumer needs.
-    </p>
-
-    <div class="grid">
-
-      <div class="card">
-
-        <h3>
-          Software Development
-        </h3>
-
-        <p>
-          Development of practical applications
-          and digital tools for organization,
-          productivity, and routine management.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <h3>
-          Digital Solutions
-        </h3>
-
-        <p>
-          Technology-based solutions supporting
-          business operations, information management,
-          and user-focused workflows.
-        </p>
-
-      </div>
-
-      <div class="card">
-
-        <h3>
-          Product Support
-        </h3>
-
-        <p>
-          Support information,
-          privacy notices, product documentation,
-          and official communications
-          for company software products.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section
-  id="products"
-  class="band"
->
-
-  <div class="container">
-
-    <h2 class="section-title">
-      Products
-    </h2>
-
-    <p class="intro">
-      Software developed and published
-      by King Transition Service LLC.
-    </p>
-
-    <div class="product">
-
-      <div class="product-main">
-
-        <span class="pill">
-          Featured Product
-        </span>
-
-        <h3>
-          Taviliro
-        </h3>
-
-        <p>
-          <strong>
-            Taking Life Right,
-            One Dose at a Time.
-          </strong>
-        </p>
-
-        <p>
-          Taviliro is a personal organization
-          and routine-tracking application
-          designed to help users manage medication
-          schedules, reminders, refill information,
-          hydration, meals, and wellness journal entries.
-        </p>
-
-        <p>
-          Taviliro is an organization tool
-          and does not diagnose conditions,
-          prescribe treatment, determine dosage,
-          or replace advice from
-          a qualified healthcare professional.
-        </p>
-
-        <div class="actions">
-
-          <a
-            class="btn"
-            href="/taviliro/"
-          >
-            Explore Taviliro
-          </a>
-
-          <a
-            class="btn alt"
-            href="/taviliro/privacy.html"
-          >
-            Privacy Policy
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="side-stack">
-
-        <div class="mini">
-
-          <b>
-            Local-first design
-          </b>
-
-          <span>
-            Version 1 is designed around local device
-            storage and user-controlled routine information.
-          </span>
-
-        </div>
-
-        <div class="mini">
-
-          <b>
-            Privacy information
-          </b>
-
-          <span>
-            Official Taviliro privacy documentation
-            is published directly through
-            this company website.
-          </span>
-
-        </div>
-
-        <div class="mini">
-
-          <b>
-            Official support
-          </b>
-
-          <span>
-            Support inquiries:
             <a
-              href="mailto:support@kingtransitionservice.com"
+              class="btn"
+              href="#products"
             >
-              support@kingtransitionservice.com
+
+              Explore Products
+
             </a>
-          </span>
+
+
+            <a
+              class="btn alt"
+              href="#contact"
+            >
+
+              Contact Us
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="command">
+
+          <h2>
+
+            Company Information
+
+          </h2>
+
+
+          <div class="metric">
+
+            <span>
+              Legal Name
+            </span>
+
+            <b>
+              KING TRANSITION SERVICE LLC
+            </b>
+
+          </div>
+
+
+          <div class="metric">
+
+            <span>
+              Organization Type
+            </span>
+
+            <b>
+              Limited Liability Company
+            </b>
+
+          </div>
+
+
+          <div class="metric">
+
+            <span>
+              Location
+            </span>
+
+            <b>
+              Georgia, United States
+            </b>
+
+          </div>
+
+
+          <div class="metric">
+
+            <span>
+              Official Website
+            </span>
+
+            <b>
+              kingtransitionservice.com
+            </b>
+
+          </div>
 
         </div>
 
       </div>
 
-    </div>
+    </section>
 
-  </div>
 
-</section>
+    <!-- =============================================
+         ABOUT
+         ============================================= -->
 
-<section id="contact">
+    <section
+      id="about"
+      class="band"
+    >
 
-  <div class="container">
+      <div class="container">
 
-    <h2 class="section-title">
-      Contact
-    </h2>
+        <h2
+          class="section-title reveal"
+        >
 
-    <p class="intro">
-      For business, product, or support inquiries
-      concerning King Transition Service LLC
-      and its software products.
-    </p>
+          About King Transition Service LLC
 
-    <div class="contact">
+        </h2>
 
-      <div class="contact-box">
 
-        <strong>
-          KING TRANSITION SERVICE LLC
-        </strong>
+        <p
+          class="intro reveal reveal-delay-1"
+        >
 
-        <p>
-          Georgia, United States
+          We build and support practical technology
+          solutions focused on organization,
+          productivity, and better everyday workflows.
+
         </p>
 
-        <p>
-          Email:
-          <a
-            href="mailto:support@kingtransitionservice.com"
+
+        <div class="grid">
+
+
+          <div
+            class="card reveal reveal-delay-1"
           >
-            support@kingtransitionservice.com
-          </a>
-        </p>
+
+            <h3>
+
+              Official Business Presence
+
+            </h3>
+
+            <p>
+
+              This website is the official online presence
+              of KING TRANSITION SERVICE LLC and provides
+              company, product, privacy,
+              and support information.
+
+            </p>
+
+          </div>
+
+
+          <div
+            class="card reveal reveal-delay-2"
+          >
+
+            <h3>
+
+              Technology Focus
+
+            </h3>
+
+            <p>
+
+              We develop user-focused software
+              and digital tools designed around
+              clear workflows and practical everyday use.
+
+            </p>
+
+          </div>
+
+
+          <div
+            class="card reveal reveal-delay-3"
+          >
+
+            <h3>
+
+              Product Support
+
+            </h3>
+
+            <p>
+
+              Official product information,
+              policy notices, privacy documentation,
+              and support contacts are maintained here.
+
+            </p>
+
+          </div>
+
+        </div>
 
       </div>
 
-      <div class="contact-box">
+    </section>
 
-        <strong>
-          Official Website
-        </strong>
 
-        <p>
-          kingtransitionservice.com
+    <!-- =============================================
+         SERVICES
+         ============================================= -->
+
+    <section id="services">
+
+      <div class="container">
+
+        <h2
+          class="section-title reveal"
+        >
+
+          What We Do
+
+        </h2>
+
+
+        <p
+          class="intro reveal reveal-delay-1"
+        >
+
+          Professional services and technology-driven
+          solutions for practical business
+          and consumer needs.
+
         </p>
 
-        <p>
-          Taviliro:
-          <a href="/taviliro/">
-            kingtransitionservice.com/taviliro/
-          </a>
-        </p>
 
-        <p>
-          Privacy:
-          <a href="/taviliro/privacy.html">
-            Taviliro Privacy Policy
-          </a>
-        </p>
+        <div class="grid">
+
+
+          <div
+            class="card reveal reveal-delay-1"
+          >
+
+            <h3>
+
+              Software Development
+
+            </h3>
+
+            <p>
+
+              Development of practical applications
+              and digital tools for organization,
+              productivity, and routine management.
+
+            </p>
+
+          </div>
+
+
+          <div
+            class="card reveal reveal-delay-2"
+          >
+
+            <h3>
+
+              Digital Solutions
+
+            </h3>
+
+            <p>
+
+              Technology-based solutions supporting
+              business operations, information management,
+              and user-focused workflows.
+
+            </p>
+
+          </div>
+
+
+          <div
+            class="card reveal reveal-delay-3"
+          >
+
+            <h3>
+
+              Product Support
+
+            </h3>
+
+            <p>
+
+              Support information,
+              privacy notices, product documentation,
+              and official communications
+              for company software products.
+
+            </p>
+
+          </div>
+
+        </div>
 
       </div>
+
+    </section>
+
+
+    <!-- =============================================
+         PRODUCTS
+         ============================================= -->
+
+    <section
+      id="products"
+      class="band"
+    >
+
+      <div class="container">
+
+
+        <h2
+          class="section-title reveal"
+        >
+
+          Products
+
+        </h2>
+
+
+        <p
+          class="intro reveal reveal-delay-1"
+        >
+
+          Software developed and published
+          by King Transition Service LLC.
+
+        </p>
+
+
+        <div class="product">
+
+
+          <div
+            class="product-main reveal reveal-delay-1"
+          >
+
+            <span class="pill">
+
+              Featured Product
+
+            </span>
+
+
+            <h3>
+
+              Taviliro
+
+            </h3>
+
+
+            <p>
+
+              <strong>
+
+                Taking Life Right,
+                One Dose at a Time.
+
+              </strong>
+
+            </p>
+
+
+            <p>
+
+              Taviliro is a personal organization
+              and routine-tracking application
+              designed to help users manage medication
+              schedules, reminders, refill information,
+              hydration, meals,
+              and wellness journal entries.
+
+            </p>
+
+
+            <p>
+
+              Taviliro is an organization tool
+              and does not diagnose conditions,
+              prescribe treatment, determine dosage,
+              or replace advice from
+              a qualified healthcare professional.
+
+            </p>
+
+
+            <div class="actions">
+
+              <a
+                class="btn"
+                href="/taviliro/"
+              >
+
+                Explore Taviliro
+
+              </a>
+
+
+              <a
+                class="btn alt"
+                href="/taviliro/privacy.html"
+              >
+
+                Privacy Policy
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="side-stack">
+
+
+            <div
+              class="mini reveal reveal-delay-1"
+            >
+
+              <b>
+
+                Local-first design
+
+              </b>
+
+              <span>
+
+                Version 1 is designed around local device
+                storage and user-controlled routine information.
+
+              </span>
+
+            </div>
+
+
+            <div
+              class="mini reveal reveal-delay-2"
+            >
+
+              <b>
+
+                Privacy information
+
+              </b>
+
+              <span>
+
+                Official Taviliro privacy documentation
+                is published directly through
+                this company website.
+
+              </span>
+
+            </div>
+
+
+            <div
+              class="mini reveal reveal-delay-3"
+            >
+
+              <b>
+
+                Official support
+
+              </b>
+
+              <span>
+
+                Support inquiries:
+
+                <a
+                  href="mailto:support@kingtransitionservice.com"
+                >
+
+                  support@kingtransitionservice.com
+
+                </a>
+
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =============================================
+         CONTACT
+         ============================================= -->
+
+    <section id="contact">
+
+      <div class="container">
+
+        <h2
+          class="section-title reveal"
+        >
+
+          Contact
+
+        </h2>
+
+
+        <p
+          class="intro reveal reveal-delay-1"
+        >
+
+          For business, product,
+          or support inquiries concerning
+          King Transition Service LLC
+          and its software products.
+
+        </p>
+
+
+        <div class="contact">
+
+
+          <div
+            class="contact-box reveal reveal-delay-1"
+          >
+
+            <strong>
+
+              KING TRANSITION SERVICE LLC
+
+            </strong>
+
+
+            <p>
+
+              Georgia, United States
+
+            </p>
+
+
+            <p>
+
+              Email:
+
+              <a
+                href="mailto:support@kingtransitionservice.com"
+              >
+
+                support@kingtransitionservice.com
+
+              </a>
+
+            </p>
+
+          </div>
+
+
+          <div
+            class="contact-box reveal reveal-delay-2"
+          >
+
+            <strong>
+
+              Official Website
+
+            </strong>
+
+
+            <p>
+
+              kingtransitionservice.com
+
+            </p>
+
+
+            <p>
+
+              Taviliro:
+
+              <a href="/taviliro/">
+
+                kingtransitionservice.com/taviliro/
+
+              </a>
+
+            </p>
+
+
+            <p>
+
+              Privacy:
+
+              <a
+                href="/taviliro/privacy.html"
+              >
+
+                Taviliro Privacy Policy
+
+              </a>
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =============================================
+       FOOTER
+       ============================================= -->
+
+  <footer>
+
+    <div class="container foot">
+
+      <span>
+
+        © 2026 King Transition Service LLC.
+        All rights reserved.
+
+      </span>
+
+
+      <span>
+
+        Official company website
+
+      </span>
 
     </div>
 
-  </div>
+  </footer>
 
-</section>
 
-</main>
+  <!-- =============================================
+       PHASE 2 JAVASCRIPT
+       ============================================= -->
 
-<footer>
+  <script>
 
-  <div class="container foot">
+    /* ---------------------------------------------
+       Scroll reveal
+       --------------------------------------------- */
 
-    <span>
-      © 2026 King Transition Service LLC.
-      All rights reserved.
-    </span>
+    const revealElements =
+      document.querySelectorAll(
+        ".reveal"
+      );
 
-    <span>
-      Official company website
-    </span>
 
-  </div>
+    const revealObserver =
+      new IntersectionObserver(
 
-</footer>
+        (entries) => {
+
+          entries.forEach(
+
+            (entry) => {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                entry.target
+                  .classList
+                  .add(
+                    "visible"
+                  );
+
+                revealObserver
+                  .unobserve(
+                    entry.target
+                  );
+
+              }
+
+            }
+
+          );
+
+        },
+
+        {
+
+          threshold:
+            0.12
+
+        }
+
+      );
+
+
+    revealElements.forEach(
+
+      (element) => {
+
+        revealObserver
+          .observe(
+            element
+          );
+
+      }
+
+    );
+
+
+    /* ---------------------------------------------
+       Mouse-follow hero glow
+       Desktop only
+       --------------------------------------------- */
+
+    const hero =
+      document.querySelector(
+        ".hero"
+      );
+
+
+    const heroContent =
+      document.getElementById(
+        "heroContent"
+      );
+
+
+    const heroGlow =
+      document.getElementById(
+        "heroGlow"
+      );
+
+
+    if (
+      hero &&
+      heroContent &&
+      heroGlow &&
+      window.matchMedia(
+        "(pointer:fine)"
+      ).matches
+    ) {
+
+      heroContent
+        .addEventListener(
+
+          "mousemove",
+
+          (event) => {
+
+            const rect =
+              heroContent
+                .getBoundingClientRect();
+
+
+            const x =
+              event.clientX
+              - rect.left;
+
+
+            const y =
+              event.clientY
+              - rect.top;
+
+
+            heroGlow.style.left =
+              x + "px";
+
+
+            heroGlow.style.top =
+              y + "px";
+
+
+            heroGlow.style.opacity =
+              "1";
+
+          }
+
+        );
+
+
+      heroContent
+        .addEventListener(
+
+          "mouseleave",
+
+          () => {
+
+            heroGlow.style.opacity =
+              "0";
+
+          }
+
+        );
+
+    }
+
+  </script>
+
 
 </body>
+
 </html>
