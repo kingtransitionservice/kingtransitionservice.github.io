@@ -521,10 +521,199 @@
         letter-spacing: -1.5px;
       }
     }
+    /* =========================
+   Animated background effects
+   ========================= */
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  isolation: isolate;
+}
+
+/* soft glow background */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(103, 232, 249, 0.10), transparent 25%),
+    radial-gradient(circle at 82% 30%, rgba(110, 231, 183, 0.10), transparent 25%),
+    radial-gradient(circle at 50% 75%, rgba(241, 197, 91, 0.06), transparent 30%);
+  animation: glowShift 12s ease-in-out infinite alternate;
+}
+
+/* faint tech grid lines */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.14;
+  background-image:
+    linear-gradient(rgba(103, 232, 249, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(103, 232, 249, 0.10) 1px, transparent 1px);
+  background-size: 120px 120px;
+  mask-image: linear-gradient(to bottom, rgba(255,255,255,0.45), rgba(255,255,255,0.08));
+}
+
+/* make sure page content stays above effects */
+body > *:not(.page-effects) {
+  position: relative;
+  z-index: 1;
+}
+
+/* animated streak layer */
+.page-effects {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.page-effects .line {
+  position: absolute;
+  left: -20%;
+  width: 140%;
+  height: 2px;
+  border-radius: 999px;
+  opacity: 0;
+  transform: rotate(-12deg);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(103, 232, 249, 0.05) 15%,
+    rgba(103, 232, 249, 0.35) 35%,
+    rgba(110, 231, 183, 0.65) 50%,
+    rgba(103, 232, 249, 0.35) 65%,
+    rgba(103, 232, 249, 0.05) 85%,
+    transparent 100%
+  );
+  box-shadow:
+    0 0 10px rgba(103, 232, 249, 0.15),
+    0 0 24px rgba(110, 231, 183, 0.10);
+}
+
+.page-effects .line-1 {
+  top: 18%;
+  animation: streakMove 10s linear infinite;
+}
+
+.page-effects .line-2 {
+  top: 38%;
+  animation: streakMove 14s linear infinite 2s;
+}
+
+.page-effects .line-3 {
+  top: 60%;
+  animation: streakMove 12s linear infinite 4s;
+}
+
+.page-effects .line-4 {
+  top: 78%;
+  animation: streakMove 16s linear infinite 1s;
+}
+
+.page-effects .orb {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.16;
+  background: radial-gradient(circle, rgba(110,231,183,0.55), transparent 70%);
+  animation: floatOrb 18s ease-in-out infinite alternate;
+}
+
+.page-effects .orb-1 {
+  top: 8%;
+  right: 6%;
+}
+
+.page-effects .orb-2 {
+  bottom: 10%;
+  left: 8%;
+  background: radial-gradient(circle, rgba(103,232,249,0.45), transparent 70%);
+  animation-duration: 22s;
+}
+
+@keyframes glowShift {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 0.95;
+  }
+  100% {
+    transform: scale(1.04) translateY(-10px);
+    opacity: 1;
+  }
+}
+
+@keyframes streakMove {
+  0% {
+    transform: translateX(-12%) rotate(-12deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.55;
+  }
+  90% {
+    opacity: 0.20;
+  }
+  100% {
+    transform: translateX(12%) rotate(-12deg);
+    opacity: 0;
+  }
+}
+
+@keyframes floatOrb {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(20px, -18px) scale(1.08);
+  }
+}
+
+/* optional subtle hover lift for cards/buttons if not already present */
+.card,
+.panel,
+.hero-card,
+.info-card,
+button,
+.cta,
+a.button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.panel:hover,
+.hero-card:hover,
+.info-card:hover,
+button:hover,
+.cta:hover,
+a.button:hover {
+  transform: translateY(-3px);
+}
   </style>
 </head>
 
 <body>
+  <div class="page-effects">
+    <span class="line line-1"></span>
+    <span class="line line-2"></span>
+    <span class="line line-3"></span>
+    <span class="line line-4"></span>
+
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+  </div>
 
 <header>
 
