@@ -62,16 +62,11 @@
     }
 
     .brand-mark{
-      width:44px;
-      height:44px;
-      border-radius:50%;
-      display:grid;
-      place-items:center;
-      border:1px solid rgba(212,175,55,0.58);
-      color:var(--gold);
-      background:linear-gradient(145deg,var(--forest),var(--forest-deep));
-      letter-spacing:1px;
-    }
+    width:72px;
+    height:72px;
+    object-fit:contain;
+    display:block;
+}
 
     .brand small{
       display:block;
@@ -236,7 +231,11 @@
   <div class="container nav">
 
     <a class="brand" href="/">
-      <div class="brand-mark">KJW</div>
+     <img
+    class="brand-mark"
+    src="kjw-logo.png"
+    alt="KJW Juice & Wellness logo"
+>
       <div>
         KJW Juice &amp; Wellness
         <small>King Transition Service LLC</small>
