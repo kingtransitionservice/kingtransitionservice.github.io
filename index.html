@@ -1724,6 +1724,78 @@
     }
 
 
+
+    /* =====================================================
+       MULTI-PRODUCT GRID
+       Future apps can be added by copying one .app-card block.
+       ===================================================== */
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .app-card {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, rgba(18,31,43,0.92), rgba(8,17,25,0.96));
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.20);
+      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .app-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(110,231,183,0.34);
+      box-shadow: 0 28px 64px rgba(0,0,0,0.28), 0 0 34px rgba(110,231,183,0.07);
+    }
+
+    .app-card.kjw {
+      border-color: rgba(241,197,91,0.24);
+      background: linear-gradient(145deg, rgba(18,49,37,0.93), rgba(8,24,18,0.97));
+    }
+
+    .app-card.kjw:hover {
+      border-color: rgba(241,197,91,0.48);
+      box-shadow: 0 28px 64px rgba(0,0,0,0.28), 0 0 36px rgba(241,197,91,0.08);
+    }
+
+    .app-card h3 {
+      font-size: 36px;
+      margin: 16px 0 8px;
+    }
+
+    .app-card p {
+      color: var(--muted);
+    }
+
+    .app-card .tagline {
+      color: white;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .app-card .app-meta {
+      display: grid;
+      gap: 10px;
+      margin: 20px 0 4px;
+      padding: 16px 0 2px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .app-card .app-meta span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .app-card .app-meta strong {
+      color: white;
+    }
+
     /* =====================================================
        CONTACT
        ===================================================== */
@@ -2755,188 +2827,112 @@
 
     <!-- =============================================
          PRODUCTS
+         Add future apps by copying one .app-card block.
          ============================================= -->
 
-    <section
-      id="products"
-      class="band"
-    >
+    <section id="products" class="band">
 
       <div class="container">
 
-
-        <h2
-          class="section-title reveal"
-        >
-
+        <h2 class="section-title reveal">
           Products
-
         </h2>
 
-
-        <p
-          class="intro reveal reveal-delay-1"
-        >
-
-          Software developed and published
-          by King Transition Service LLC.
-
+        <p class="intro reveal reveal-delay-1">
+          Software developed and published by King Transition Service LLC.
+          This section is designed to grow as additional apps are released.
         </p>
 
+        <div class="products-grid">
 
-        <div class="product">
+          <article class="app-card reveal reveal-delay-1">
 
+            <span class="pill">Available Product</span>
 
-          <div
-            class="product-main reveal reveal-delay-1"
-          >
+            <h3>Taviliro</h3>
 
-            <span class="pill">
-
-              Featured Product
-
-            </span>
-
-
-            <h3>
-
-              Taviliro
-
-            </h3>
-
-
-            <p>
-
-              <strong>
-
-                Taking Life Right,
-                One Dose at a Time.
-
-              </strong>
-
+            <p class="tagline">
+              Taking Life Right, One Dose at a Time.
             </p>
 
-
             <p>
-
-              Taviliro is a personal organization
-              and routine-tracking application
-              designed to help users manage medication
-              schedules, reminders, refill information,
-              hydration, meals,
-              and wellness journal entries.
-
+              Taviliro is a personal organization and routine-tracking
+              application designed to help users manage medication schedules,
+              reminders, refill information, hydration, meals, and wellness
+              journal entries.
             </p>
 
-
             <p>
-
-              Taviliro is an organization tool
-              and does not diagnose conditions,
-              prescribe treatment, determine dosage,
-              or replace advice from
-              a qualified healthcare professional.
-
+              Taviliro is an organization tool and does not diagnose conditions,
+              prescribe treatment, determine dosage, or replace advice from a
+              qualified healthcare professional.
             </p>
 
+            <div class="app-meta">
+              <span><strong>Publisher:</strong> King Transition Service LLC</span>
+              <span><strong>Support:</strong> support@kingtransitionservice.com</span>
+            </div>
 
             <div class="actions">
-
-              <a
-                class="btn"
-                href="/taviliro/"
-              >
-
-                Explore Taviliro
-
-              </a>
-
-
-              <a
-                class="btn alt"
-                href="/taviliro/privacy.html"
-              >
-
-                Privacy Policy
-
-              </a>
-
+              <a class="btn" href="/taviliro/">Explore Taviliro</a>
+              <a class="btn alt" href="/taviliro/privacy.html">Privacy Policy</a>
             </div>
 
-          </div>
+          </article>
 
 
-          <div class="side-stack">
+          <article class="app-card kjw reveal reveal-delay-2">
 
+            <span class="pill">Wellness &amp; Nutrition</span>
 
-            <div
-              class="mini reveal reveal-delay-1"
-            >
+            <h3>KJW Juice &amp; Wellness</h3>
 
-              <b>
+            <p class="tagline">
+              Recipes, food knowledge, and practical wellness education.
+            </p>
 
-                Local-first design
+            <p>
+              KJW brings recipes, food knowledge, wellness education,
+              Jamaican ingredients, microgreens, hydroponics, grocery planning,
+              favorites, and general body-system education together in one
+              mobile experience.
+            </p>
 
-              </b>
+            <p>
+              KJW provides general informational and educational content only.
+              It is not a medical device and is not intended to diagnose, treat,
+              cure, or prevent any disease or medical condition.
+            </p>
 
-              <span>
-
-                Version 1 is designed around local device
-                storage and user-controlled routine information.
-
-              </span>
-
+            <div class="app-meta">
+              <span><strong>Publisher:</strong> King Transition Service LLC</span>
+              <span><strong>Support:</strong> support@kingtransitionservice.com</span>
             </div>
 
-
-            <div
-              class="mini reveal reveal-delay-2"
-            >
-
-              <b>
-
-                Privacy information
-
-              </b>
-
-              <span>
-
-                Official Taviliro privacy documentation
-                is published directly through
-                this company website.
-
-              </span>
-
+            <div class="actions">
+              <a class="btn" href="/kjw/">Explore KJW</a>
+              <a class="btn alt" href="/kjw/privacy/">Privacy Policy</a>
             </div>
 
+          </article>
 
-            <div
-              class="mini reveal reveal-delay-3"
-            >
 
-              <b>
-
-                Official support
-
-              </b>
-
-              <span>
-
-                Support inquiries:
-
-                <a
-                  href="mailto:support@kingtransitionservice.com"
-                >
-
-                  support@kingtransitionservice.com
-
-                </a>
-
-              </span>
-
+          <!-- FUTURE APP TEMPLATE
+          <article class="app-card reveal">
+            <span class="pill">App Category</span>
+            <h3>Future App Name</h3>
+            <p class="tagline">Future app tagline.</p>
+            <p>Future app description.</p>
+            <div class="app-meta">
+              <span><strong>Publisher:</strong> King Transition Service LLC</span>
+              <span><strong>Support:</strong> support@kingtransitionservice.com</span>
             </div>
-
-          </div>
+            <div class="actions">
+              <a class="btn" href="/future-app/">Explore App</a>
+              <a class="btn alt" href="/future-app/privacy/">Privacy Policy</a>
+            </div>
+          </article>
+          -->
 
         </div>
 
@@ -3031,30 +3027,31 @@
 
 
             <p>
-
               Taviliro:
-
               <a href="/taviliro/">
-
                 kingtransitionservice.com/taviliro/
-
               </a>
-
             </p>
 
+            <p>
+              Taviliro Privacy:
+              <a href="/taviliro/privacy.html">
+                Privacy Policy
+              </a>
+            </p>
 
             <p>
-
-              Privacy:
-
-              <a
-                href="/taviliro/privacy.html"
-              >
-
-                Taviliro Privacy Policy
-
+              KJW Juice &amp; Wellness:
+              <a href="/kjw/">
+                kingtransitionservice.com/kjw/
               </a>
+            </p>
 
+            <p>
+              KJW Privacy:
+              <a href="/kjw/privacy/">
+                Privacy Policy
+              </a>
             </p>
 
           </div>
