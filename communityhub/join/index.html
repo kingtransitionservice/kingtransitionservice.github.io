@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="theme-color" content="#0C2027">
+<title>Crestelle Living | Community Invitation</title>
+<style>
+:root{--navy:#0C2027;--navy2:#14343B;--green:#007D6E;--green2:#005F55;--gold:#D4A84F;--bg:#F5F7F8;--surface:#fff;--text:#172126;--muted:#65727A;--border:#E4E9EC;--soft:#DFF4EF}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
+body{display:flex;align-items:center;justify-content:center;padding:24px 16px}.wrap{width:100%;max-width:620px}.card{background:var(--surface);border:1px solid var(--border);border-radius:24px;overflow:hidden;box-shadow:0 18px 50px rgba(12,32,39,.12)}
+.hero{padding:34px 26px 30px;text-align:center;background:radial-gradient(circle at top right,rgba(212,168,79,.16),transparent 30%),linear-gradient(145deg,var(--navy),var(--navy2))}
+.logo{width:min(320px,84%);height:auto;display:block;margin:0 auto 18px}.eyebrow{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+h1{color:#fff;margin:10px 0 0;font-size:clamp(26px,6vw,35px)}.tagline{color:var(--soft);margin:10px 0 0;font-size:14px}.goldline{width:54px;height:3px;background:var(--gold);border-radius:99px;margin:18px auto 0}
+.content{padding:30px 26px}.label{color:var(--green);font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.6px}h2{font-size:25px;line-height:1.25;margin:8px 0 14px}.intro{font-size:16px;line-height:1.65;color:var(--muted);margin:0}
+.community{margin:24px 0;padding:18px;border-radius:16px;background:var(--soft);border:1px solid rgba(0,125,110,.14)}.community small{display:block;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.8px}.community strong{display:block;margin-top:5px;color:var(--navy);font-size:20px}
+button{width:100%;border:0;border-radius:14px;padding:16px 18px;background:var(--green);color:#fff;font-size:17px;font-weight:800;cursor:pointer;box-shadow:0 8px 22px rgba(0,125,110,.2)}button:hover{background:var(--green2)}button:disabled{opacity:.55;cursor:not-allowed}
+.status{margin-top:16px;padding:14px 15px;border-radius:12px;background:var(--bg);color:var(--muted);font-size:14px;line-height:1.5}.status.error{background:#FFF3F2;color:#9E3434;border:1px solid #F3D2CF}
+.security{margin-top:22px;padding:16px;border-radius:14px;border:1px solid var(--border)}.security strong{display:block;font-size:14px;margin-bottom:6px}.security p{margin:0;color:var(--muted);font-size:13px;line-height:1.55}.footer{text-align:center;margin-top:18px;color:var(--muted);font-size:12px;line-height:1.5}
+@media(max-width:480px){body{padding:0;align-items:stretch}.wrap{max-width:none}.card{min-height:100vh;border-radius:0;border-left:0;border-right:0}.hero{padding-top:40px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<section class="card">
+<header class="hero">
+<img class="logo" src="./crestelle_living_logo.png" alt="Crestelle Living">
+<div class="eyebrow">Private Community Access</div>
+<h1>You've Been Invited</h1>
+<p class="tagline">Elevating Every Part of Community Living</p>
+<div class="goldline"></div>
+</header>
+<div class="content">
+<div class="label">Community Invitation</div>
+<h2>Open your invitation in Crestelle Living</h2>
+<p class="intro">Your community has invited you to securely claim your resident membership. Use the button below on your Android device.</p>
+<div class="community"><small>Community</small><strong id="communityName">Your Community</strong></div>
+<button id="openAppButton" type="button">Open Crestelle Living</button>
+<div class="status" id="statusMessage">Tap the button above to continue in the Crestelle Living app.</div>
+<div class="security"><strong>Secure invitation</strong><p>This invitation is tied to the email address that received it. For your security, the invitation code is never displayed on this page.</p></div>
+</div>
+</section>
+<div class="footer">Crestelle Living<br>Elevating Every Part of Community Living</div>
+</main>
+<script>
+(()=>{
+ const p=new URLSearchParams(location.search);
+ const token=p.get("token")||"";
+ const community=p.get("community")||"";
+ const btn=document.getElementById("openAppButton");
+ const msg=document.getElementById("statusMessage");
+ const name=document.getElementById("communityName");
+ if(community.trim()) name.textContent=community.trim();
+ if(token) history.replaceState({},document.title,location.pathname);
+ if(!token){btn.disabled=true;msg.classList.add("error");msg.textContent="This invitation link is missing its secure token. Please use the latest invitation email.";}
+ btn.addEventListener("click",()=>{
+   if(!token)return;
+   msg.classList.remove("error");
+   msg.textContent="Opening Crestelle Living…";
+   location.href="crestelleliving://claim?token="+encodeURIComponent(token);
+   setTimeout(()=>{msg.textContent="If Crestelle Living did not open, make sure the app is installed, then tap Open Crestelle Living again.";},1800);
+ });
+})();
+</script>
+</body>
+</html>
