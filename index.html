@@ -1,72 +1,3309 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#0C2027">
-<title>Crestelle Living | Delete Account</title>
-<style>
-:root{--navy:#0C2027;--navy2:#14343B;--green:#007D6E;--green2:#005F55;--gold:#D4A84F;--bg:#F5F7F8;--surface:#fff;--text:#172126;--muted:#65727A;--border:#E4E9EC;--soft:#DFF4EF}
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
-body{padding:24px 16px}.wrap{width:100%;max-width:760px;margin:0 auto}.card{background:var(--surface);border:1px solid var(--border);border-radius:24px;overflow:hidden;box-shadow:0 18px 50px rgba(12,32,39,.10)}
-.hero{padding:34px 28px 30px;text-align:center;background:radial-gradient(circle at top right,rgba(212,168,79,.16),transparent 30%),linear-gradient(145deg,var(--navy),var(--navy2))}
-.eyebrow{color:var(--gold);font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}h1{color:#fff;margin:10px 0 0;font-size:clamp(28px,6vw,40px)}.tagline{color:var(--soft);margin:10px 0 0;font-size:14px}.goldline{width:54px;height:3px;background:var(--gold);border-radius:99px;margin:18px auto 0}
-.content{padding:30px 28px}.lead{font-size:16px;line-height:1.7;color:var(--muted)}h2{font-size:20px;color:var(--navy);margin:28px 0 10px}p,li{line-height:1.65}ul,ol{padding-left:22px}.note{padding:16px;border-radius:14px;background:var(--soft);border:1px solid rgba(0,125,110,.14)}
-.danger{padding:16px;border-radius:14px;background:#FFF4F3;border:1px solid #F0CFCC;color:#7D3030}.button{display:inline-block;width:100%;text-align:center;text-decoration:none;border-radius:14px;padding:16px 18px;background:var(--green);color:#fff;font-size:17px;font-weight:800}.button:hover{background:var(--green2)}a{color:var(--green);font-weight:700}.footer{text-align:center;margin-top:18px;color:var(--muted);font-size:12px;line-height:1.5}
-@media(max-width:480px){body{padding:0}.wrap{max-width:none}.card{border-radius:0;border-left:0;border-right:0;min-height:100vh}.hero{padding-top:40px}.content{padding:24px 20px}}
-</style>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    King Transition Service LLC
+  </title>
+
+  <meta
+    name="description"
+    content="Official website of King Transition Service LLC. Professional services, software projects, digital products, and official support information."
+  >
+
+  <style>
+
+    /* =====================================================
+       KING TRANSITION SERVICE LLC
+       PREMIUM WEBSITE UI + PHASE 2 MOTION SYSTEM
+       ===================================================== */
+
+    :root {
+
+      --bg: #071018;
+
+      --bg-deep: #04090e;
+
+      --panel:
+        rgba(18, 31, 43, 0.82);
+
+      --panel-solid:
+        #101b27;
+
+      --line:
+        rgba(125, 211, 252, 0.14);
+
+      --line-strong:
+        rgba(110, 231, 183, 0.32);
+
+      --text:
+        #f7fbff;
+
+      --muted:
+        #a9b8c6;
+
+      --mint:
+        #6ee7b7;
+
+      --cyan:
+        #67e8f9;
+
+      --gold:
+        #f1c75b;
+
+      --shadow:
+        0 30px 80px
+        rgba(0, 0, 0, 0.34);
+
+    }
+
+
+    /* =====================================================
+       RESET
+       ===================================================== */
+
+    * {
+
+      box-sizing:
+        border-box;
+
+    }
+
+
+    html {
+
+      scroll-behavior:
+        smooth;
+
+    }
+
+
+    body {
+
+      margin:
+        0;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color:
+        var(--text);
+
+      background:
+
+        radial-gradient(
+          circle at 15% 10%,
+          rgba(103,232,249,0.10),
+          transparent 28%
+        ),
+
+        radial-gradient(
+          circle at 86% 4%,
+          rgba(110,231,183,0.10),
+          transparent 30%
+        ),
+
+        linear-gradient(
+          180deg,
+          var(--bg),
+          var(--bg-deep) 75%
+        );
+
+      line-height:
+        1.65;
+
+      overflow-x:
+        hidden;
+
+      position:
+        relative;
+
+      isolation:
+        isolate;
+
+    }
+
+
+    a {
+
+      color:
+        var(--mint);
+
+      text-decoration:
+        none;
+
+    }
+
+
+    button,
+    a {
+
+      -webkit-tap-highlight-color:
+        transparent;
+
+    }
+
+
+    .container {
+
+      width:
+        min(
+          1180px,
+          calc(100% - 40px)
+        );
+
+      margin:
+        auto;
+
+    }
+
+
+    /* =====================================================
+       BACKGROUND GRAPHICS
+       ===================================================== */
+
+    body::before {
+
+      content:
+        "";
+
+      position:
+        fixed;
+
+      inset:
+        0;
+
+      pointer-events:
+        none;
+
+      z-index:
+        0;
+
+      background:
+
+        radial-gradient(
+          circle at 15% 20%,
+          rgba(103,232,249,0.09),
+          transparent 24%
+        ),
+
+        radial-gradient(
+          circle at 82% 30%,
+          rgba(110,231,183,0.09),
+          transparent 26%
+        ),
+
+        radial-gradient(
+          circle at 50% 75%,
+          rgba(241,197,91,0.05),
+          transparent 30%
+        );
+
+      animation:
+        glowShift 12s
+        ease-in-out
+        infinite
+        alternate;
+
+    }
+
+
+    body::after {
+
+      content:
+        "";
+
+      position:
+        fixed;
+
+      inset:
+        0;
+
+      pointer-events:
+        none;
+
+      z-index:
+        0;
+
+      opacity:
+        0.14;
+
+      background-image:
+
+        linear-gradient(
+          rgba(103,232,249,0.10)
+          1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(103,232,249,0.10)
+          1px,
+          transparent 1px
+        );
+
+      background-size:
+        120px 120px;
+
+      mask-image:
+        linear-gradient(
+          to bottom,
+          rgba(255,255,255,0.55),
+          rgba(255,255,255,0.03)
+        );
+
+    }
+
+
+    body > *:not(.page-effects) {
+
+      position:
+        relative;
+
+      z-index:
+        1;
+
+    }
+
+
+    .page-effects {
+
+      position:
+        fixed;
+
+      inset:
+        0;
+
+      pointer-events:
+        none;
+
+      overflow:
+        hidden;
+
+      z-index:
+        0;
+
+    }
+
+
+    /* =====================================================
+       MOVING LIGHT STREAKS
+       ===================================================== */
+
+    .page-effects .line {
+
+      position:
+        absolute;
+
+      left:
+        -20%;
+
+      width:
+        140%;
+
+      height:
+        2px;
+
+      border-radius:
+        999px;
+
+      opacity:
+        0;
+
+      transform:
+        rotate(-12deg);
+
+      background:
+
+        linear-gradient(
+
+          90deg,
+
+          transparent 0%,
+
+          rgba(103,232,249,0.05)
+          15%,
+
+          rgba(103,232,249,0.35)
+          35%,
+
+          rgba(110,231,183,0.65)
+          50%,
+
+          rgba(103,232,249,0.35)
+          65%,
+
+          rgba(103,232,249,0.05)
+          85%,
+
+          transparent 100%
+
+        );
+
+      box-shadow:
+
+        0 0 10px
+        rgba(103,232,249,0.15),
+
+        0 0 24px
+        rgba(110,231,183,0.10);
+
+    }
+
+
+    .line-1 {
+
+      top:
+        18%;
+
+      animation:
+        streakMove 10s
+        linear infinite;
+
+    }
+
+
+    .line-2 {
+
+      top:
+        38%;
+
+      animation:
+        streakMove 14s
+        linear infinite 2s;
+
+    }
+
+
+    .line-3 {
+
+      top:
+        60%;
+
+      animation:
+        streakMove 12s
+        linear infinite 4s;
+
+    }
+
+
+    .line-4 {
+
+      top:
+        78%;
+
+      animation:
+        streakMove 16s
+        linear infinite 1s;
+
+    }
+
+
+    /* =====================================================
+       AMBIENT ORBS
+       ===================================================== */
+
+    .orb {
+
+      position:
+        absolute;
+
+      width:
+        260px;
+
+      height:
+        260px;
+
+      border-radius:
+        50%;
+
+      filter:
+        blur(65px);
+
+      opacity:
+        0.16;
+
+      background:
+
+        radial-gradient(
+          circle,
+          rgba(110,231,183,0.55),
+          transparent 70%
+        );
+
+      animation:
+        floatOrb 18s
+        ease-in-out
+        infinite alternate;
+
+    }
+
+
+    .orb-1 {
+
+      top:
+        7%;
+
+      right:
+        6%;
+
+    }
+
+
+    .orb-2 {
+
+      bottom:
+        10%;
+
+      left:
+        8%;
+
+      background:
+
+        radial-gradient(
+          circle,
+          rgba(103,232,249,0.48),
+          transparent 70%
+        );
+
+      animation-duration:
+        22s;
+
+    }
+
+
+    .orb-3 {
+
+      top:
+        46%;
+
+      right:
+        34%;
+
+      width:
+        160px;
+
+      height:
+        160px;
+
+      opacity:
+        0.10;
+
+      background:
+
+        radial-gradient(
+          circle,
+          rgba(241,197,91,0.55),
+          transparent 70%
+        );
+
+      animation-duration:
+        26s;
+
+    }
+
+
+    /* =====================================================
+       HEADER / NAVIGATION
+       ===================================================== */
+
+    header {
+
+      position:
+        sticky;
+
+      top:
+        0;
+
+      z-index:
+        50;
+
+      background:
+        rgba(5,12,18,0.76);
+
+      backdrop-filter:
+        blur(18px);
+
+      -webkit-backdrop-filter:
+        blur(18px);
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    .nav {
+
+      min-height:
+        78px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        space-between;
+
+      gap:
+        22px;
+
+    }
+
+
+    .brand {
+
+      font-weight:
+        900;
+
+      letter-spacing:
+        0.7px;
+
+      animation:
+        brandReveal
+        0.8s ease both;
+
+    }
+
+
+    .brand span {
+
+      color:
+        var(--mint);
+
+      text-shadow:
+        0 0 20px
+        rgba(110,231,183,0.16);
+
+    }
+
+
+    nav {
+
+      display:
+        flex;
+
+      gap:
+        24px;
+
+      flex-wrap:
+        wrap;
+
+    }
+
+
+    nav a {
+
+      color:
+        var(--muted);
+
+      font-weight:
+        700;
+
+      font-size:
+        14px;
+
+      position:
+        relative;
+
+      padding:
+        8px 0;
+
+      transition:
+        color 0.25s ease;
+
+    }
+
+
+    nav a::after {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      left:
+        0;
+
+      bottom:
+        1px;
+
+      width:
+        100%;
+
+      height:
+        2px;
+
+      transform:
+        scaleX(0);
+
+      transform-origin:
+        center;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--mint),
+          var(--cyan)
+        );
+
+      transition:
+        transform
+        0.28s ease;
+
+    }
+
+
+    nav a:hover {
+
+      color:
+        white;
+
+    }
+
+
+    nav a:hover::after {
+
+      transform:
+        scaleX(1);
+
+    }
+
+
+    /* =====================================================
+       HERO
+       ===================================================== */
+
+    .hero {
+  min-height: auto;
+
+  display: block;
+
+  padding: 95px 0 85px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+    .hero-grid {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        1.1fr 0.9fr;
+
+      gap:
+        52px;
+
+      align-items:
+        center;
+
+    }
+
+
+    .hero-content {
+
+      position:
+        relative;
+
+    }
+
+
+    .hero-mouse-glow {
+
+      position:
+        absolute;
+
+      width:
+        420px;
+
+      height:
+        420px;
+
+      border-radius:
+        50%;
+
+      pointer-events:
+        none;
+
+      opacity:
+        0;
+
+      background:
+
+        radial-gradient(
+          circle,
+          rgba(103,232,249,0.10),
+          rgba(110,231,183,0.04) 35%,
+          transparent 70%
+        );
+
+      filter:
+        blur(15px);
+
+      transform:
+        translate(-50%,-50%);
+
+      transition:
+        opacity 0.35s ease;
+
+      z-index:
+        0;
+
+    }
+
+
+    .hero-content > * {
+
+      position:
+        relative;
+
+      z-index:
+        1;
+
+    }
+
+
+    .eyebrow {
+
+      display:
+        inline-flex;
+
+      gap:
+        8px;
+
+      align-items:
+        center;
+
+      padding:
+        7px 12px;
+
+      border:
+        1px solid
+        rgba(110,231,183,0.22);
+
+      border-radius:
+        999px;
+
+      background:
+        rgba(110,231,183,0.06);
+
+      color:
+        var(--mint);
+
+      font-size:
+        12px;
+
+      font-weight:
+        900;
+
+      letter-spacing:
+        1.5px;
+
+      text-transform:
+        uppercase;
+
+      opacity:
+        0;
+
+      animation:
+        heroReveal
+        0.7s ease forwards;
+
+    }
+
+
+    h1 {
+
+      font-size:
+        clamp(
+          48px,
+          7vw,
+          84px
+        );
+
+      line-height:
+        0.98;
+
+      letter-spacing:
+        -3px;
+
+      margin:
+        22px 0;
+
+      opacity:
+        0;
+
+      animation:
+        heroReveal
+        0.85s ease
+        0.12s forwards;
+
+    }
+
+
+    .gradient {
+
+      background:
+
+        linear-gradient(
+          90deg,
+          #ffffff,
+          var(--mint),
+          var(--cyan),
+          #ffffff
+        );
+
+      background-size:
+        240% auto;
+
+      -webkit-background-clip:
+        text;
+
+      background-clip:
+        text;
+
+      color:
+        transparent;
+
+      animation:
+        textShimmer 7s
+        linear infinite;
+
+    }
+
+
+    .hero p {
+
+      font-size:
+        19px;
+
+      color:
+        var(--muted);
+
+      max-width:
+        720px;
+
+      opacity:
+        0;
+
+      animation:
+        heroReveal
+        0.85s ease
+        0.24s forwards;
+
+    }
+
+
+    /* =====================================================
+       BUTTONS
+       ===================================================== */
+
+    .actions {
+
+      display:
+        flex;
+
+      gap:
+        14px;
+
+      flex-wrap:
+        wrap;
+
+      margin-top:
+        30px;
+
+      opacity:
+        0;
+
+      animation:
+        heroReveal
+        0.85s ease
+        0.36s forwards;
+
+    }
+
+
+    .btn {
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+      padding:
+        14px 20px;
+
+      border-radius:
+        12px;
+
+      font-weight:
+        900;
+
+      border:
+        1px solid
+        rgba(255,255,255,0.10);
+
+      background:
+
+        linear-gradient(
+          135deg,
+          var(--mint),
+          var(--cyan)
+        );
+
+      color:
+        #04100f;
+
+      box-shadow:
+        0 12px 40px
+        rgba(103,232,249,0.16);
+
+      transition:
+
+        transform
+        0.25s ease,
+
+        box-shadow
+        0.25s ease,
+
+        filter
+        0.25s ease;
+
+    }
+
+
+    .btn::before {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      top:
+        -60%;
+
+      left:
+        -80%;
+
+      width:
+        60%;
+
+      height:
+        220%;
+
+      transform:
+        rotate(18deg);
+
+      background:
+
+        linear-gradient(
+          90deg,
+          transparent,
+          rgba(255,255,255,0.55),
+          transparent
+        );
+
+      transition:
+        left 0.55s ease;
+
+    }
+
+
+    .btn:hover::before {
+
+      left:
+        130%;
+
+    }
+
+
+    .btn:hover {
+
+      transform:
+        translateY(-4px)
+        scale(1.015);
+
+      filter:
+        brightness(1.05);
+
+      box-shadow:
+
+        0 18px 45px
+        rgba(103,232,249,0.22),
+
+        0 0 30px
+        rgba(110,231,183,0.13);
+
+    }
+
+
+    .btn.alt {
+
+      background:
+        rgba(255,255,255,0.035);
+
+      color:
+        white;
+
+      border-color:
+        var(--line);
+
+    }
+
+
+    /* =====================================================
+       COMPANY INFORMATION PANEL
+       ===================================================== */
+
+    .command {
+
+      position:
+        relative;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          rgba(25,43,57,0.88),
+          rgba(10,19,28,0.94)
+        );
+
+      border:
+        1px solid var(--line);
+
+      border-radius:
+        24px;
+
+      padding:
+        28px;
+
+      box-shadow:
+        var(--shadow);
+
+      overflow:
+        hidden;
+
+      opacity:
+        0;
+
+      animation:
+
+        panelReveal
+        0.9s ease
+        0.25s forwards,
+
+        ambientGlow
+        6s ease-in-out
+        1.2s infinite;
+
+    }
+
+
+    .command::before {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      inset:
+        0;
+
+      padding:
+        1px;
+
+      border-radius:
+        inherit;
+
+      background:
+
+        linear-gradient(
+          120deg,
+          transparent 10%,
+          rgba(103,232,249,0.45),
+          rgba(110,231,183,0.40),
+          transparent 90%
+        );
+
+      background-size:
+        260% 260%;
+
+      animation:
+        borderFlow 8s
+        linear infinite;
+
+      -webkit-mask:
+
+        linear-gradient(
+          #fff 0 0
+        )
+        content-box,
+
+        linear-gradient(
+          #fff 0 0
+        );
+
+      -webkit-mask-composite:
+        xor;
+
+      mask-composite:
+        exclude;
+
+      pointer-events:
+        none;
+
+    }
+
+
+    .command::after {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      width:
+        240px;
+
+      height:
+        240px;
+
+      border-radius:
+        50%;
+
+      right:
+        -80px;
+
+      top:
+        -90px;
+
+      background:
+
+        radial-gradient(
+          circle,
+          rgba(110,231,183,0.25),
+          transparent 65%
+        );
+
+      animation:
+        panelOrb
+        8s ease-in-out
+        infinite alternate;
+
+    }
+
+
+    .command h2 {
+
+      color:
+        var(--gold);
+
+      margin:
+        0 0 22px;
+
+    }
+
+
+    .metric {
+
+      display:
+        flex;
+
+      justify-content:
+        space-between;
+
+      gap:
+        16px;
+
+      padding:
+        14px 0;
+
+      border-bottom:
+        1px solid
+        rgba(255,255,255,0.07);
+
+      transition:
+        padding-left
+        0.25s ease;
+
+    }
+
+
+    .metric:hover {
+
+      padding-left:
+        7px;
+
+    }
+
+
+    .metric:last-child {
+
+      border-bottom:
+        0;
+
+    }
+
+
+    .metric b {
+
+      color:
+        white;
+
+      text-align:
+        right;
+
+    }
+
+
+    .metric span {
+
+      color:
+        var(--muted);
+
+    }
+
+
+    /* =====================================================
+       GENERAL SECTIONS
+       ===================================================== */
+
+    section {
+
+      padding:
+        80px 0;
+
+    }
+
+
+    .section-title {
+
+      font-size:
+        38px;
+
+      line-height:
+        1.1;
+
+      margin:
+        0 0 12px;
+
+    }
+
+
+    .intro {
+
+      color:
+        var(--muted);
+
+      max-width:
+        760px;
+
+      margin-bottom:
+        34px;
+
+    }
+
+
+    .band {
+
+      background:
+
+        linear-gradient(
+          180deg,
+          rgba(255,255,255,0.018),
+          rgba(255,255,255,0.01)
+        );
+
+      border-top:
+        1px solid var(--line);
+
+      border-bottom:
+        1px solid var(--line);
+
+    }
+
+
+    /* =====================================================
+       CARDS
+       ===================================================== */
+
+    .grid {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap:
+        22px;
+
+    }
+
+
+    .card {
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+      background:
+        var(--panel);
+
+      border:
+        1px solid var(--line);
+
+      border-radius:
+        20px;
+
+      padding:
+        26px;
+
+      box-shadow:
+        0 18px 50px
+        rgba(0,0,0,0.18);
+
+      transition:
+
+        transform
+        0.35s ease,
+
+        border-color
+        0.35s ease,
+
+        box-shadow
+        0.35s ease;
+
+    }
+
+
+    .card::before {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      inset:
+        0;
+
+      opacity:
+        0;
+
+      background:
+
+        radial-gradient(
+          circle at 20% 0%,
+          rgba(110,231,183,0.12),
+          transparent 38%
+        );
+
+      transition:
+        opacity 0.35s ease;
+
+    }
+
+
+    .card:hover::before {
+
+      opacity:
+        1;
+
+    }
+
+
+    .card:hover {
+
+      transform:
+        translateY(-8px);
+
+      border-color:
+        rgba(110,231,183,0.35);
+
+      box-shadow:
+
+        0 28px 60px
+        rgba(0,0,0,0.28),
+
+        0 0 28px
+        rgba(110,231,183,0.06);
+
+    }
+
+
+    .card h3 {
+
+      position:
+        relative;
+
+      margin-top:
+        0;
+
+      color:
+        var(--mint);
+
+    }
+
+
+    .card p {
+
+      position:
+        relative;
+
+      color:
+        var(--muted);
+
+    }
+
+
+    /* =====================================================
+       PRODUCT SECTION
+       ===================================================== */
+
+    .product {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        1fr 0.8fr;
+
+      gap:
+        32px;
+
+      align-items:
+        stretch;
+
+    }
+
+
+    .product-main {
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+      background:
+
+        linear-gradient(
+          135deg,
+          rgba(110,231,183,0.09),
+          rgba(103,232,249,0.05)
+        );
+
+      border:
+        1px solid
+        rgba(110,231,183,0.18);
+
+      border-radius:
+        24px;
+
+      padding:
+        34px;
+
+      animation:
+        productPulse
+        6s ease-in-out
+        infinite;
+
+      transition:
+
+        transform
+        0.35s ease,
+
+        border-color
+        0.35s ease;
+
+    }
+
+
+    .product-main::before {
+
+      content:
+        "";
+
+      position:
+        absolute;
+
+      inset:
+        -50%;
+
+      background:
+
+        conic-gradient(
+          from 180deg,
+          transparent 0deg,
+          rgba(110,231,183,0.05) 90deg,
+          transparent 180deg,
+          rgba(103,232,249,0.05) 270deg,
+          transparent 360deg
+        );
+
+      animation:
+        productRotate
+        18s linear infinite;
+
+      pointer-events:
+        none;
+
+    }
+
+
+    .product-main > * {
+
+      position:
+        relative;
+
+      z-index:
+        1;
+
+    }
+
+
+    .product-main:hover {
+
+      transform:
+        translateY(-6px);
+
+      border-color:
+        rgba(110,231,183,0.34);
+
+    }
+
+
+    .pill {
+
+      display:
+        inline-block;
+
+      padding:
+        6px 10px;
+
+      border-radius:
+        999px;
+
+      background:
+        rgba(110,231,183,0.12);
+
+      color:
+        var(--mint);
+
+      font-size:
+        12px;
+
+      font-weight:
+        900;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        0.7px;
+
+    }
+
+
+    .product-main h3 {
+
+      font-size:
+        42px;
+
+      margin:
+        16px 0 8px;
+
+    }
+
+
+    .product-main p {
+
+      color:
+        var(--muted);
+
+    }
+
+
+    .side-stack {
+
+      display:
+        grid;
+
+      gap:
+        18px;
+
+    }
+
+
+    .mini {
+
+      background:
+        var(--panel);
+
+      border:
+        1px solid var(--line);
+
+      border-radius:
+        20px;
+
+      padding:
+        24px;
+
+      transition:
+
+        transform
+        0.35s ease,
+
+        border-color
+        0.35s ease,
+
+        box-shadow
+        0.35s ease;
+
+    }
+
+
+    .mini:hover {
+
+      transform:
+        translateX(7px);
+
+      border-color:
+        rgba(103,232,249,0.30);
+
+      box-shadow:
+        0 20px 40px
+        rgba(0,0,0,0.20);
+
+    }
+
+
+    .mini b {
+
+      display:
+        block;
+
+      color:
+        var(--gold);
+
+      margin-bottom:
+        8px;
+
+    }
+
+
+    .mini span {
+
+      color:
+        var(--muted);
+
+    }
+
+
+
+    /* =====================================================
+       MULTI-PRODUCT GRID
+       Future apps can be added by copying one .app-card block.
+       ===================================================== */
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .app-card {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(145deg, rgba(18,31,43,0.92), rgba(8,17,25,0.96));
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.20);
+      transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .app-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(110,231,183,0.34);
+      box-shadow: 0 28px 64px rgba(0,0,0,0.28), 0 0 34px rgba(110,231,183,0.07);
+    }
+
+    .app-card.kjw {
+      border-color: rgba(241,197,91,0.24);
+      background: linear-gradient(145deg, rgba(18,49,37,0.93), rgba(8,24,18,0.97));
+    }
+
+    .app-card.kjw:hover {
+      border-color: rgba(241,197,91,0.48);
+      box-shadow: 0 28px 64px rgba(0,0,0,0.28), 0 0 36px rgba(241,197,91,0.08);
+    }
+
+    .app-card h3 {
+      font-size: 36px;
+      margin: 16px 0 8px;
+    }
+
+    .app-card p {
+      color: var(--muted);
+    }
+
+    .app-card .tagline {
+      color: white;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .app-card .app-meta {
+      display: grid;
+      gap: 10px;
+      margin: 20px 0 4px;
+      padding: 16px 0 2px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .app-card .app-meta span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .app-card .app-meta strong {
+      color: white;
+    }
+
+    /* =====================================================
+       CONTACT
+       ===================================================== */
+
+    .contact {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap:
+        30px;
+
+    }
+
+
+    .contact-box {
+
+      background:
+        var(--panel);
+
+      border:
+        1px solid var(--line);
+
+      border-radius:
+        20px;
+
+      padding:
+        28px;
+
+      transition:
+
+        transform
+        0.35s ease,
+
+        border-color
+        0.35s ease,
+
+        box-shadow
+        0.35s ease;
+
+    }
+
+
+    .contact-box:hover {
+
+      transform:
+        translateY(-6px);
+
+      border-color:
+        rgba(110,231,183,0.30);
+
+      box-shadow:
+
+        0 22px 50px
+        rgba(0,0,0,0.23),
+
+        0 0 30px
+        rgba(103,232,249,0.05);
+
+    }
+
+
+    .contact-box strong {
+
+      color:
+        white;
+
+    }
+
+
+    .contact-box p {
+
+      color:
+        var(--muted);
+
+    }
+
+
+    /* =====================================================
+       SCROLL REVEAL
+       ===================================================== */
+
+    .reveal {
+
+      opacity:
+        0;
+
+      transform:
+        translateY(38px);
+
+      transition:
+
+        opacity
+        0.8s ease,
+
+        transform
+        0.8s
+        cubic-bezier(
+          0.22,
+          1,
+          0.36,
+          1
+        );
+
+    }
+
+
+    .reveal.visible {
+
+      opacity:
+        1;
+
+      transform:
+        translateY(0);
+
+    }
+
+
+    .reveal-delay-1 {
+
+      transition-delay:
+        0.08s;
+
+    }
+
+
+    .reveal-delay-2 {
+
+      transition-delay:
+        0.16s;
+
+    }
+
+
+    .reveal-delay-3 {
+
+      transition-delay:
+        0.24s;
+
+    }
+
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+
+    footer {
+
+      padding:
+        36px 0;
+
+      border-top:
+        1px solid var(--line);
+
+      color:
+        var(--muted);
+
+      font-size:
+        14px;
+
+    }
+
+
+    .foot {
+
+      display:
+        flex;
+
+      justify-content:
+        space-between;
+
+      gap:
+        20px;
+
+      flex-wrap:
+        wrap;
+
+    }
+
+
+    /* =====================================================
+       KEYFRAMES
+       ===================================================== */
+
+    @keyframes heroReveal {
+
+      from {
+
+        opacity:
+          0;
+
+        transform:
+          translateY(28px);
+
+      }
+
+      to {
+
+        opacity:
+          1;
+
+        transform:
+          translateY(0);
+
+      }
+
+    }
+
+
+    @keyframes panelReveal {
+
+      from {
+
+        opacity:
+          0;
+
+        transform:
+          translateY(35px)
+          scale(0.98);
+
+      }
+
+      to {
+
+        opacity:
+          1;
+
+        transform:
+          translateY(0)
+          scale(1);
+
+      }
+
+    }
+
+
+    @keyframes brandReveal {
+
+      from {
+
+        opacity:
+          0;
+
+        transform:
+          translateX(-18px);
+
+      }
+
+      to {
+
+        opacity:
+          1;
+
+        transform:
+          translateX(0);
+
+      }
+
+    }
+
+
+    @keyframes ambientGlow {
+
+      0%,
+      100% {
+
+        box-shadow:
+
+          0 30px 80px
+          rgba(0,0,0,0.34),
+
+          0 0 0
+          rgba(110,231,183,0);
+
+      }
+
+      50% {
+
+        box-shadow:
+
+          0 30px 80px
+          rgba(0,0,0,0.34),
+
+          0 0 48px
+          rgba(110,231,183,0.10);
+
+      }
+
+    }
+
+
+    @keyframes glowShift {
+
+      0% {
+
+        transform:
+          scale(1)
+          translateY(0);
+
+      }
+
+      100% {
+
+        transform:
+          scale(1.04)
+          translateY(-10px);
+
+      }
+
+    }
+
+
+    @keyframes streakMove {
+
+      0% {
+
+        transform:
+          translateX(-12%)
+          rotate(-12deg);
+
+        opacity:
+          0;
+
+      }
+
+      10% {
+
+        opacity:
+          0.22;
+
+      }
+
+      50% {
+
+        opacity:
+          0.55;
+
+      }
+
+      90% {
+
+        opacity:
+          0.18;
+
+      }
+
+      100% {
+
+        transform:
+          translateX(12%)
+          rotate(-12deg);
+
+        opacity:
+          0;
+
+      }
+
+    }
+
+
+    @keyframes floatOrb {
+
+      0% {
+
+        transform:
+          translate(0,0)
+          scale(1);
+
+      }
+
+      100% {
+
+        transform:
+          translate(25px,-18px)
+          scale(1.10);
+
+      }
+
+    }
+
+
+    @keyframes textShimmer {
+
+      0% {
+
+        background-position:
+          0% center;
+
+      }
+
+      100% {
+
+        background-position:
+          240% center;
+
+      }
+
+    }
+
+
+    @keyframes borderFlow {
+
+      0% {
+
+        background-position:
+          0% 50%;
+
+      }
+
+      100% {
+
+        background-position:
+          260% 50%;
+
+      }
+
+    }
+
+
+    @keyframes panelOrb {
+
+      from {
+
+        transform:
+          translate(0,0)
+          scale(1);
+
+      }
+
+      to {
+
+        transform:
+          translate(-18px,18px)
+          scale(1.08);
+
+      }
+
+    }
+
+
+    @keyframes productPulse {
+
+      0%,
+      100% {
+
+        box-shadow:
+          0 20px 45px
+          rgba(0,0,0,0.16);
+
+      }
+
+      50% {
+
+        box-shadow:
+
+          0 24px 56px
+          rgba(0,0,0,0.22),
+
+          0 0 42px
+          rgba(110,231,183,0.07);
+
+      }
+
+    }
+
+
+    @keyframes productRotate {
+
+      from {
+
+        transform:
+          rotate(0deg);
+
+      }
+
+      to {
+
+        transform:
+          rotate(360deg);
+
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+       ===================================================== */
+
+    @media (
+      max-width:
+      850px
+    ) {
+
+      .hero-grid,
+      .product,
+      .contact,
+      .grid {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+
+      .nav {
+
+        align-items:
+          flex-start;
+
+        flex-direction:
+          column;
+
+        padding:
+          16px 0;
+
+      }
+
+
+      .hero {
+
+        min-height:
+          auto;
+
+        padding-top:
+          70px;
+
+      }
+
+
+      h1 {
+
+        letter-spacing:
+          -1.5px;
+
+      }
+
+
+      .metric {
+
+        flex-direction:
+          column;
+
+      }
+
+
+      .metric b {
+
+        text-align:
+          left;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       ACCESSIBILITY
+       ===================================================== */
+
+    @media (
+      prefers-reduced-motion:
+      reduce
+    ) {
+
+      *,
+
+      *::before,
+
+      *::after {
+
+        animation-duration:
+          0.01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+
+        transition-duration:
+          0.01ms !important;
+
+        scroll-behavior:
+          auto !important;
+
+      }
+
+
+      .reveal {
+
+        opacity:
+          1;
+
+        transform:
+          none;
+
+      }
+
+    }
+
+  </style>
+
 </head>
+
+
 <body>
-<main class="wrap">
-<section class="card">
-<header class="hero">
-<div class="eyebrow">Crestelle Living</div>
-<h1>Delete Your Account</h1>
-<p class="tagline">Account & Data Removal</p>
-<div class="goldline"></div>
-</header>
-<div class="content">
-<p class="lead">Crestelle Living provides an in-app account-deletion option and an external way to request deletion assistance.</p>
 
-<h2>Delete your account in the app</h2>
-<ol>
-<li>Open Crestelle Living and sign in.</li>
-<li>Tap <strong>More</strong>.</li>
-<li>Open <strong>Settings</strong>.</li>
-<li>Open <strong>Privacy</strong>.</li>
-<li>Tap <strong>Delete Account</strong>.</li>
-<li>Review the warning and confirm deletion.</li>
-</ol>
 
-<div class="danger"><strong>Deletion is permanent.</strong> After successful deletion, your Crestelle Living account can no longer be used to sign in.</div>
+  <!-- =============================================
+       BACKGROUND VISUAL EFFECTS
+       ============================================= -->
 
-<h2>What is deleted</h2>
-<ul>
-<li>Your authentication account and resident profile.</li>
-<li>Your community and management memberships associated with the account.</li>
-<li>Your profile photo and eligible personal uploads.</li>
-<li>Your personal notifications and notification preferences.</li>
-<li>Your marketplace listings and associated marketplace photos.</li>
-<li>Your event RSVPs and other account-specific interaction records where applicable.</li>
-</ul>
+  <div class="page-effects">
 
-<h2>What may be retained</h2>
-<p>Some shared community records may need to remain so the community's history, operations, and records are not damaged. These records may be anonymized, disassociated from your active account, or reassigned to a system “Deleted Resident” identity. Examples can include historical group messages, community issue records, moderation/audit records, and administrator-created announcements, events, documents, or amenities.</p>
+    <span class="line line-1"></span>
 
-<h2>Need deletion assistance?</h2>
-<div class="note"><p>If you cannot access the app or need help with a deletion request, email our support team from the email address associated with your Crestelle Living account. Include “Crestelle Living Account Deletion” in the subject line. Do not send your password.</p></div>
-<p><a class="button" href="mailto:support@kingtransitionservice.com?subject=Crestelle%20Living%20Account%20Deletion">Email Account Deletion Request</a></p>
+    <span class="line line-2"></span>
 
-<h2>Privacy Policy</h2>
-<p>For more information about how Crestelle Living handles data, read the <a href="/communityhub/privacy-policy/">Crestelle Living Privacy Policy</a>.</p>
+    <span class="line line-3"></span>
 
-<h2>Contact</h2>
-<p><strong>KING TRANSITION SERVICE LLC</strong><br>
-Email: <a href="mailto:support@kingtransitionservice.com">support@kingtransitionservice.com</a><br>
-Website: <a href="https://kingtransitionservice.com/">kingtransitionservice.com</a></p>
-</div>
-</section>
-<div class="footer">Crestelle Living · KING TRANSITION SERVICE LLC</div>
-</main>
+    <span class="line line-4"></span>
+
+    <span class="orb orb-1"></span>
+
+    <span class="orb orb-2"></span>
+
+    <span class="orb orb-3"></span>
+
+  </div>
+
+
+  <!-- =============================================
+       HEADER
+       ============================================= -->
+
+  <header>
+
+    <div class="container nav">
+
+      <div class="brand">
+
+        KING TRANSITION
+
+        <span>
+          SERVICE LLC
+        </span>
+
+      </div>
+
+
+      <nav>
+
+        <a href="#about">
+          About
+        </a>
+
+        <a href="#services">
+          Services
+        </a>
+
+        <a href="#products">
+          Products
+        </a>
+
+        <a href="#contact">
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- =============================================
+         HERO
+         ============================================= -->
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+
+        <div
+          class="hero-content"
+          id="heroContent"
+        >
+
+          <div
+            class="hero-mouse-glow"
+            id="heroGlow"
+          ></div>
+
+
+          <div class="eyebrow">
+
+            Official Company Website
+
+          </div>
+
+
+          <h1>
+
+            Building
+
+            <span class="gradient">
+
+              practical digital solutions
+
+            </span>
+
+            with purpose.
+
+          </h1>
+
+
+          <p>
+
+            King Transition Service LLC is a U.S.-based
+            limited liability company supporting
+            professional services, technology projects,
+            software development, and digital products.
+
+          </p>
+
+
+          <div class="actions">
+
+            <a
+              class="btn"
+              href="#products"
+            >
+
+              Explore Products
+
+            </a>
+
+
+            <a
+              class="btn alt"
+              href="#contact"
+            >
+
+              Contact Us
+
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="command">
+
+          <h2>
+
+            Company Information
+
+          </h2>
+
+
+          <div class="metric">
+
+            <span>
+              Legal Name
+            </span>
+
+            <b>
+              KING TRANSITION SERVICE LLC
+            </b>
+
+          </div>
+
+
+          <div class="metric">
+
+            <span>
+              Organization Type
+            </span>
+
+            <b>
+              Limited Liability Company
+            </b>
+
+          </div>
+
+
+          <div class="metric">
+
+            <span>
+              Location
+            </span>
+
+            <b>
+              Georgia, United States
+            </b>
+
+          </div>
+
+
+          <div class="metric">
+
+            <span>
+              Official Website
+            </span>
+
+            <b>
+              kingtransitionservice.com
+            </b>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =============================================
+         ABOUT
+         ============================================= -->
+
+    <section
+      id="about"
+      class="band"
+    >
+
+      <div class="container">
+
+        <h2
+          class="section-title reveal"
+        >
+
+          About King Transition Service LLC
+
+        </h2>
+
+
+        <p
+          class="intro reveal reveal-delay-1"
+        >
+
+          We build and support practical technology
+          solutions focused on organization,
+          productivity, and better everyday workflows.
+
+        </p>
+
+
+        <div class="grid">
+
+
+          <div
+            class="card reveal reveal-delay-1"
+          >
+
+            <h3>
+
+              Official Business Presence
+
+            </h3>
+
+            <p>
+
+              This website is the official online presence
+              of KING TRANSITION SERVICE LLC and provides
+              company, product, privacy,
+              and support information.
+
+            </p>
+
+          </div>
+
+
+          <div
+            class="card reveal reveal-delay-2"
+          >
+
+            <h3>
+
+              Technology Focus
+
+            </h3>
+
+            <p>
+
+              We develop user-focused software
+              and digital tools designed around
+              clear workflows and practical everyday use.
+
+            </p>
+
+          </div>
+
+
+          <div
+            class="card reveal reveal-delay-3"
+          >
+
+            <h3>
+
+              Product Support
+
+            </h3>
+
+            <p>
+
+              Official product information,
+              policy notices, privacy documentation,
+              and support contacts are maintained here.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =============================================
+         SERVICES
+         ============================================= -->
+
+    <section id="services">
+
+      <div class="container">
+
+        <h2
+          class="section-title reveal"
+        >
+
+          What We Do
+
+        </h2>
+
+
+        <p
+          class="intro reveal reveal-delay-1"
+        >
+
+          Professional services and technology-driven
+          solutions for practical business
+          and consumer needs.
+
+        </p>
+
+
+        <div class="grid">
+
+
+          <div
+            class="card reveal reveal-delay-1"
+          >
+
+            <h3>
+
+              Software Development
+
+            </h3>
+
+            <p>
+
+              Development of practical applications
+              and digital tools for organization,
+              productivity, and routine management.
+
+            </p>
+
+          </div>
+
+
+          <div
+            class="card reveal reveal-delay-2"
+          >
+
+            <h3>
+
+              Digital Solutions
+
+            </h3>
+
+            <p>
+
+              Technology-based solutions supporting
+              business operations, information management,
+              and user-focused workflows.
+
+            </p>
+
+          </div>
+
+
+          <div
+            class="card reveal reveal-delay-3"
+          >
+
+            <h3>
+
+              Product Support
+
+            </h3>
+
+            <p>
+
+              Support information,
+              privacy notices, product documentation,
+              and official communications
+              for company software products.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =============================================
+         PRODUCTS
+         Add future apps by copying one .app-card block.
+         ============================================= -->
+
+    <section id="products" class="band">
+
+      <div class="container">
+
+        <h2 class="section-title reveal">
+          Products
+        </h2>
+
+        <p class="intro reveal reveal-delay-1">
+          Software developed and published by King Transition Service LLC.
+          This section is designed to grow as additional apps are released.
+        </p>
+
+        <div class="products-grid">
+
+          <article class="app-card reveal reveal-delay-1">
+
+            <span class="pill">Available Product</span>
+
+            <h3>Taviliro</h3>
+
+            <p class="tagline">
+              Taking Life Right, One Dose at a Time.
+            </p>
+
+            <p>
+              Taviliro is a personal organization and routine-tracking
+              application designed to help users manage medication schedules,
+              reminders, refill information, hydration, meals, and wellness
+              journal entries.
+            </p>
+
+            <p>
+              Taviliro is an organization tool and does not diagnose conditions,
+              prescribe treatment, determine dosage, or replace advice from a
+              qualified healthcare professional.
+            </p>
+
+            <div class="app-meta">
+              <span><strong>Publisher:</strong> King Transition Service LLC</span>
+              <span><strong>Support:</strong> support@kingtransitionservice.com</span>
+            </div>
+
+            <div class="actions">
+              <a class="btn" href="/taviliro/">Explore Taviliro</a>
+              <a class="btn alt" href="/taviliro/privacy.html">Privacy Policy</a>
+            </div>
+
+          </article>
+
+
+          <article class="app-card kjw reveal reveal-delay-2">
+
+            <span class="pill">Wellness &amp; Nutrition</span>
+
+            <h3>KJW Juice &amp; Wellness</h3>
+
+            <p class="tagline">
+              Recipes, food knowledge, and practical wellness education.
+            </p>
+
+            <p>
+              KJW brings recipes, food knowledge, wellness education,
+              Jamaican ingredients, microgreens, hydroponics, grocery planning,
+              favorites, and general body-system education together in one
+              mobile experience.
+            </p>
+
+            <p>
+              KJW provides general informational and educational content only.
+              It is not a medical device and is not intended to diagnose, treat,
+              cure, or prevent any disease or medical condition.
+            </p>
+
+            <div class="app-meta">
+              <span><strong>Publisher:</strong> King Transition Service LLC</span>
+              <span><strong>Support:</strong> support@kingtransitionservice.com</span>
+            </div>
+
+            <div class="actions">
+              <a class="btn" href="/kjw/">Explore KJW</a>
+              <a class="btn alt" href="/kjw/privacy/">Privacy Policy</a>
+            </div>
+
+          </article>
+
+
+          <article class="app-card reveal reveal-delay-3">
+
+            <span class="pill">Incident Documentation &amp; Evidence</span>
+
+            <h3>RECORDYN</h3>
+
+            <p class="tagline">
+              Document what happened. Preserve the evidence. Build the record.
+            </p>
+
+            <p>
+              RECORDYN is a private incident record and evidence manager
+              designed to help users document incidents, organize supporting
+              evidence, record important details, and build a structured record
+              for later review.
+            </p>
+
+            <p>
+              RECORDYN uses a local-first design. Incident records and evidence
+              are stored on the device by default, and users control when reports
+              or evidence are exported or shared.
+            </p>
+
+            <div class="app-meta">
+              <span><strong>Publisher:</strong> King Transition Service LLC</span>
+              <span><strong>Support:</strong> support@kingtransitionservice.com</span>
+            </div>
+
+            <div class="actions">
+              <a class="btn" href="/recordyn/">Explore RECORDYN</a>
+              <a class="btn alt" href="/recordyn/privacy.html">Privacy Policy</a>
+            </div>
+
+          </article>
+
+
+          <!-- FUTURE APP TEMPLATE
+          <article class="app-card reveal">
+            <span class="pill">App Category</span>
+            <h3>Future App Name</h3>
+            <p class="tagline">Future app tagline.</p>
+            <p>Future app description.</p>
+            <div class="app-meta">
+              <span><strong>Publisher:</strong> King Transition Service LLC</span>
+              <span><strong>Support:</strong> support@kingtransitionservice.com</span>
+            </div>
+            <div class="actions">
+              <a class="btn" href="/future-app/">Explore App</a>
+              <a class="btn alt" href="/future-app/privacy/">Privacy Policy</a>
+            </div>
+          </article>
+          -->
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =============================================
+         CONTACT
+         ============================================= -->
+
+    <section id="contact">
+
+      <div class="container">
+
+        <h2
+          class="section-title reveal"
+        >
+
+          Contact
+
+        </h2>
+
+
+        <p
+          class="intro reveal reveal-delay-1"
+        >
+
+          For business, product,
+          or support inquiries concerning
+          King Transition Service LLC
+          and its software products.
+
+        </p>
+
+
+        <div class="contact">
+
+
+          <div
+            class="contact-box reveal reveal-delay-1"
+          >
+
+            <strong>
+
+              KING TRANSITION SERVICE LLC
+
+            </strong>
+
+
+            <p>
+
+              Georgia, United States
+
+            </p>
+
+
+            <p>
+
+              Email:
+
+              <a
+                href="mailto:support@kingtransitionservice.com"
+              >
+
+                support@kingtransitionservice.com
+
+              </a>
+
+            </p>
+
+          </div>
+
+
+          <div
+            class="contact-box reveal reveal-delay-2"
+          >
+
+            <strong>
+
+              Official Website
+
+            </strong>
+
+
+            <p>
+
+              kingtransitionservice.com
+
+            </p>
+
+
+            <p>
+              Taviliro:
+              <a href="/taviliro/">
+                kingtransitionservice.com/taviliro/
+              </a>
+            </p>
+
+            <p>
+              Taviliro Privacy:
+              <a href="/taviliro/privacy.html">
+                Privacy Policy
+              </a>
+            </p>
+
+            <p>
+              KJW Juice &amp; Wellness:
+              <a href="/kjw/">
+                kingtransitionservice.com/kjw/
+              </a>
+            </p>
+
+            <p>
+              KJW Privacy:
+              <a href="/kjw/privacy/">
+                Privacy Policy
+              </a>
+            </p>
+
+            <p>
+              RECORDYN:
+              <a href="/recordyn/">
+                kingtransitionservice.com/recordyn/
+              </a>
+            </p>
+
+            <p>
+              RECORDYN Privacy:
+              <a href="/recordyn/privacy.html">
+                Privacy Policy
+              </a>
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- =============================================
+       FOOTER
+       ============================================= -->
+
+  <footer>
+
+    <div class="container foot">
+
+      <span>
+
+        © 2026 King Transition Service LLC.
+        All rights reserved.
+
+      </span>
+
+
+      <span>
+
+        Official company website
+
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =============================================
+       PHASE 2 JAVASCRIPT
+       ============================================= -->
+
+  <script>
+
+    /* ---------------------------------------------
+       Scroll reveal
+       --------------------------------------------- */
+
+    const revealElements =
+      document.querySelectorAll(
+        ".reveal"
+      );
+
+
+    const revealObserver =
+      new IntersectionObserver(
+
+        (entries) => {
+
+          entries.forEach(
+
+            (entry) => {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                entry.target
+                  .classList
+                  .add(
+                    "visible"
+                  );
+
+                revealObserver
+                  .unobserve(
+                    entry.target
+                  );
+
+              }
+
+            }
+
+          );
+
+        },
+
+        {
+
+          threshold:
+            0.12
+
+        }
+
+      );
+
+
+    revealElements.forEach(
+
+      (element) => {
+
+        revealObserver
+          .observe(
+            element
+          );
+
+      }
+
+    );
+
+
+    /* ---------------------------------------------
+       Mouse-follow hero glow
+       Desktop only
+       --------------------------------------------- */
+
+    const hero =
+      document.querySelector(
+        ".hero"
+      );
+
+
+    const heroContent =
+      document.getElementById(
+        "heroContent"
+      );
+
+
+    const heroGlow =
+      document.getElementById(
+        "heroGlow"
+      );
+
+
+    if (
+      hero &&
+      heroContent &&
+      heroGlow &&
+      window.matchMedia(
+        "(pointer:fine)"
+      ).matches
+    ) {
+
+      heroContent
+        .addEventListener(
+
+          "mousemove",
+
+          (event) => {
+
+            const rect =
+              heroContent
+                .getBoundingClientRect();
+
+
+            const x =
+              event.clientX
+              - rect.left;
+
+
+            const y =
+              event.clientY
+              - rect.top;
+
+
+            heroGlow.style.left =
+              x + "px";
+
+
+            heroGlow.style.top =
+              y + "px";
+
+
+            heroGlow.style.opacity =
+              "1";
+
+          }
+
+        );
+
+
+      heroContent
+        .addEventListener(
+
+          "mouseleave",
+
+          () => {
+
+            heroGlow.style.opacity =
+              "0";
+
+          }
+
+        );
+
+    }
+
+  </script>
+
+
 </body>
+
 </html>
