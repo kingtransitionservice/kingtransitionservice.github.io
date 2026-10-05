@@ -347,7 +347,7 @@
         padding: 16px 0;
       }
     }
-  </style>
+.shots-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;align-items:start;margin-top:34px;}.shot{text-align:center;margin:0;}.shot:nth-child(2),.shot:nth-child(4){margin-top:30px;}.shot-phone{position:relative;border-radius:40px;padding:10px;background:linear-gradient(160deg,#1b2a3a,#0a141d);border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,0.35);transition:transform 0.35s ease,border-color 0.35s ease,box-shadow 0.35s ease;}.shot-phone::before{content:"";position:absolute;top:20px;left:50%;transform:translateX(-50%);width:88px;height:22px;background:#04090e;border-radius:999px;z-index:2;}.shot-phone img{display:block;width:100%;height:auto;border-radius:30px;}.shot:hover .shot-phone{transform:translateY(-8px);border-color:rgba(110,231,183,0.4);box-shadow:0 30px 70px rgba(0,0,0,0.4),0 0 44px rgba(110,231,183,0.08);}.shot h4{color:var(--text);font-size:18px;margin:18px 0 6px;}.shot p{color:var(--muted);font-size:14px;margin:0;}.shots-cta{text-align:center;margin-top:44px;}@media (max-width:1000px){.shots-grid{grid-template-columns:repeat(2,1fr);}.shot:nth-child(2),.shot:nth-child(4){margin-top:0;}}@media (max-width:600px){.shots-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:18px;}.shot{flex:0 0 74%;scroll-snap-align:center;}}   </style>
 </head>
 
 <body>
@@ -611,7 +611,7 @@
 
 </section>
 
-<section>
+<section id="screenshots"> <div class="wrap"> <h2 class="title"> See Taviliro in action </h2> <p class="intro"> Real screens from the live app &mdash; dark, calm, and designed for everyday use. </p> <div class="shots-grid"> <figure class="shot"> <div class="shot-phone"> <img src="/images/taviliro/taviliro-home.webp" alt="Taviliro home screen showing today's routine at a glance" loading="lazy" > </div> <h4>Today at a Glance</h4> <p>Taken, pending, and due &mdash; your routine in one view.</p> </figure> <figure class="shot"> <div class="shot-phone"> <img src="/images/taviliro/taviliro-meals.webp" alt="Taviliro meal schedule screen" loading="lazy" > </div> <h4>Meal Routines</h4> <p>Set the meal times your day runs on.</p> </figure> <figure class="shot"> <div class="shot-phone"> <img src="/images/taviliro/taviliro-reports.webp" alt="Taviliro weekly dose report with adherence summary" loading="lazy" > </div> <h4>Weekly Reports</h4> <p>Adherence tracking, summarized every week.</p> </figure> <figure class="shot"> <div class="shot-phone"> <img src="/images/taviliro/taviliro-journal.webp" alt="Taviliro wellness journal entries" loading="lazy" > </div> <h4>Wellness Journal</h4> <p>Log how you feel and link it to your routine.</p> </figure> </div> <div class="shots-cta"> <a class="btn" href="https://play.google.com/store/apps/details?id=com.taviliro.app" target="_blank" rel="noopener" >Get it on Google Play</a> </div> </div> </section><section>
 
   <div class="wrap">
 
