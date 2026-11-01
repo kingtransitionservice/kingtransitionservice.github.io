@@ -361,6 +361,79 @@
       height: auto;
     }
 
+    .shots-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      align-items: start;
+      margin-top: 34px;
+    }
+
+    .shot {
+      text-align: center;
+      margin: 0;
+    }
+
+    .shot:nth-child(2),
+    .shot:nth-child(4) {
+      margin-top: 26px;
+    }
+
+    .shot-phone {
+      border-radius: 36px;
+      padding: 9px;
+      background: linear-gradient(160deg, #1b2a3a, #0a141d);
+      border: 1px solid var(--line);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+    }
+
+    .shot-phone img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 27px;
+    }
+
+    .shot h4 {
+      color: var(--text);
+      font-size: 17px;
+      margin: 16px 0 6px;
+    }
+
+    .shot p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .shots-cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    @media(max-width: 1000px) {
+      .shots-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .shot:nth-child(2),
+      .shot:nth-child(4) {
+        margin-top: 0;
+      }
+    }
+
+    @media(max-width: 600px) {
+      .shots-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .shot {
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
     .muted {
       color: var(--muted);
     }
@@ -554,6 +627,62 @@
   </p>
 
   <div class="video-frame"><video controls preload="metadata" playsinline><source src="/videos/crestelle-feature-video.mp4" type="video/mp4">Your browser does not support the video tag.</video></div>
+
+</section>
+
+<section id="screenshots">
+
+  <div class="wrap">
+
+    <h2 class="title">
+      See Crestelle Living in action
+    </h2>
+
+    <p class="intro">
+      Real screens from the live app, as published on Google Play.
+    </p>
+
+    <div class="shots-grid">
+
+      <figure class="shot">
+        <div class="shot-phone">
+          <img src="/images/crestelle/crestelle-dashboard.webp" alt="Crestelle Living dashboard showing pending resident claims, open work order tickets, and active residents" loading="lazy">
+        </div>
+        <h4>Community Dashboard</h4>
+        <p>Pending resident claims, open tickets, and resident counts at a glance.</p>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot-phone">
+          <img src="/images/crestelle/crestelle-feed.webp" alt="Crestelle Living community feed showing announcements, neighbor posts, and a community issue" loading="lazy">
+        </div>
+        <h4>Community Feed</h4>
+        <p>Announcements, events, and neighbor posts in one feed.</p>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot-phone">
+          <img src="/images/crestelle/crestelle-marketplace.webp" alt="Crestelle Living resident marketplace showing listings with categories and search" loading="lazy">
+        </div>
+        <h4>Resident Marketplace</h4>
+        <p>Residents buy, sell, and give away items inside the community.</p>
+      </figure>
+
+      <figure class="shot">
+        <div class="shot-phone">
+          <img src="/images/crestelle/crestelle-amenities.webp" alt="Crestelle Living amenities screen showing community pool, clubhouse, and fitness center hours" loading="lazy">
+        </div>
+        <h4>Community Amenities</h4>
+        <p>Pool, clubhouse, and fitness center hours and rules for residents.</p>
+      </figure>
+
+    </div>
+
+    <div class="shots-cta">
+      <a class="btn" href="https://play.google.com/store/apps/details?id=com.kingtransition.crestelleliving" target="_blank" rel="noopener">Get it on Google Play</a>
+    </div>
+
+  </div>
 
 </section>
 
