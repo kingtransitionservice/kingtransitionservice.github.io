@@ -1,0 +1,16 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.kingtransition.crestelleliving",
+      "sha256_cert_fingerprints": [
+        "82:93:9E:8D:9A:89:D3:7F:E9:20:88:F1:EA:8C:9F:C8:E0:7F:68:28:52:D5:68:FD:AE:B0:D4:C1:DB:4E:CB:B4",
+        "0B:72:71:66:3A:E7:36:15:CC:11:41:EF:A0:25:12:E6:E5:87:3C:61:E7:4C:99:94:C0:DC:85:81:40:E2:EE:A3",
+        "B5:1C:E0:26:D3:F6:39:27:63:F5:B6:5C:77:BF:C3:C5:85:65:B3:0D:8B:CF:EC:57:D7:80:54:27:0A:86:08:29"
+      ]
+    }
+  }
+]
