@@ -314,6 +314,26 @@
       color: var(--muted);
     }
 
+    .card.wide {
+      grid-column: 1 / -1;
+    }
+
+    .card ol {
+      color: var(--muted);
+
+      padding-left: 22px;
+
+      margin: 14px 0;
+    }
+
+    .card li {
+      margin-bottom: 10px;
+    }
+
+    .card li strong {
+      color: var(--text);
+    }
+
     .notice {
       background:
         rgba(103,232,249,0.06);
@@ -934,7 +954,7 @@
 
     <div class="grid">
 
-      <div class="card">
+      <div class="card wide">
 
         <h3>
           Do we have to run Crestelle from a phone?
@@ -942,16 +962,86 @@
 
         <p>
           No. A board member or manager can work on a
-          Windows computer screen instead. Install the free
-          scrcpy program on the computer, turn on Developer
-          options and USB debugging on the Android phone
-          once, connect the phone with a USB cable, allow
-          the debugging prompt, then launch scrcpy. The app
-          appears on the monitor and can be driven with the
-          mouse and keyboard, which makes roster imports,
-          announcements, and settings easier. The app still
-          runs on the phone and no community data moves to
-          the computer. Use only a computer you trust.
+          Windows computer screen instead, with the phone
+          shown on the monitor and driven by the mouse and
+          keyboard. A free program named scrcpy does it.
+          Here is the whole setup, step by step.
+        </p>
+
+        <ol>
+
+          <li>
+            <strong>Download scrcpy.</strong>
+            On the Windows computer, open the
+            <a href="https://github.com/Genymobile/scrcpy/releases">official scrcpy releases page</a>
+            and download the file with win64 in its name.
+            It is free.
+          </li>
+
+          <li>
+            <strong>Unzip it.</strong>
+            The download lands in the Downloads folder as a
+            zip file. Right click it, choose Extract all,
+            then Extract. The folder it makes is the
+            program. Nothing gets installed.
+          </li>
+
+          <li>
+            <strong>Give it a permanent home.</strong>
+            Move that whole folder to the C: drive, then
+            pin scrcpy to Start or make a desktop shortcut
+            if you like. Do not delete the folder. The pin
+            and the shortcut only point at it.
+          </li>
+
+          <li>
+            <strong>Turn on Developer mode (one time).</strong>
+            On the Android phone, open Settings, then About
+            phone, and tap Build number seven times. The
+            phone confirms Developer mode is on.
+          </li>
+
+          <li>
+            <strong>Turn on USB debugging (one time).</strong>
+            Go back to Settings, open Developer options,
+            and switch on USB debugging.
+          </li>
+
+          <li>
+            <strong>Plug in and allow.</strong>
+            Connect the phone to the computer with a USB
+            cable. When the phone asks "Allow USB
+            debugging?", tick "Always allow from this
+            computer" and tap Allow.
+          </li>
+
+          <li>
+            <strong>Launch it.</strong>
+            On the computer, open the scrcpy folder and
+            double click scrcpy. The phone screen appears
+            on the monitor. Work it with the mouse and
+            keyboard, copy and paste text both ways, and
+            drag a file onto the window to send it to the
+            phone.
+          </li>
+
+        </ol>
+
+        <p>
+          Prefer no cable? After this first setup, scrcpy
+          can also reach the phone over your own Wi-Fi. On
+          phones with Android 11 or newer, turn on Wireless
+          debugging in Developer options and pair once with
+          the code the phone shows. The phone and the
+          computer must be on the same Wi-Fi network. The
+          cable route above stays the simple and reliable
+          one.
+        </p>
+
+        <p>
+          The app still runs on the phone and no community
+          data moves to the computer. Use only a computer
+          you trust.
         </p>
 
       </div>
